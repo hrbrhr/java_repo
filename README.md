@@ -44,4 +44,4 @@
 * [Телеграмм автора курса] (javagurulv)
 * [Емейл автора курса] (viktor.savonin@gmail.com)
 
-![build](https://github.com/javagurulv/2024_java1_autumn/actions/workflows/build.yaml/badge.svg)
+![build](https://github.com/javagurulv/2025_java_1_spring/actions/workflows/build.yaml/badge.svg)
