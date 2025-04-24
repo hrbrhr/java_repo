@@ -15,7 +15,12 @@
 8. Arrays and loops (part 2)
 9. Project School Dairy (business logic)
 10. Project School Dairy (console ui)
-11. ...
+11. List, Set, Map
+12. Exceptions
+13. Stream API
+14. Multithreding
+15. Refactoring
+
 
 #### Предварительные требования
 
