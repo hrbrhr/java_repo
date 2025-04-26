@@ -5,8 +5,8 @@ class Multiplication {
     public static void main(String[] args) {
         int num1 = 25;
         int num2 = 15;
-        int result = num1 * num2;
+        int multiplicationResult = num1 * num2;
 
-        System.out.println(result);
+        System.out.println(multiplicationResult);
     }
 }
