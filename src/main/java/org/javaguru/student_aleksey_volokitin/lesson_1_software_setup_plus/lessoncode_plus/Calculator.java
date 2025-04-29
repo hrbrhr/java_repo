@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_1.lessoncode;
+package org.javaguru.student_aleksey_volokitin.lesson_1_software_setup_plus.lessoncode_plus;
 
 class Calculator {
     public static void main(String[] args) {
