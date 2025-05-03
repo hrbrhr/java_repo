@@ -1,4 +1,4 @@
-package org.javaguru.mentor.lesson_1_software_setup.lessoncode;
+package org.javaguru.student_artjoms_babicevs.lesson_1;
 
 class HelloWorld {
 
