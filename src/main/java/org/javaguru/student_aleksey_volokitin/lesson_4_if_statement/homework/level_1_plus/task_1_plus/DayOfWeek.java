@@ -32,6 +32,7 @@ class DayOfWeek {
         if((numberOfDay < 1) || (numberOfDay > 7)){
             System.out.println("Enter correct number day of week!");
         }
+        scanner.close();
     }
 }
 

@@ -2,7 +2,7 @@ package org.javaguru.student_aleksey_volokitin.lesson_4_if_statement.homework.le
 
 import java.util.Scanner;
 
-public class IsEvenNumber {
+class IsEvenNumber {
     public static void main(String[] args) {
         System.out.print("Enter a number: ");
         Scanner scanner = new Scanner(System.in);
@@ -14,5 +14,6 @@ public class IsEvenNumber {
         else{
             System.out.println("Number is odd");
         }
+        scanner.close();
     }
 }

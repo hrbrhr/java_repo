@@ -15,5 +15,6 @@ class CalculateAverageArithmetic {
 
         double averageArithmetic = (num1 + num2 + num3) / 3.0d;
         System.out.println("AverageArithmetic is " + averageArithmetic);
+        scanner.close();
     }
 }
