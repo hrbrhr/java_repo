@@ -12,5 +12,6 @@ class CircleDemo {
 
         double circleArea = circle.calculateArea();
         System.out.println("Circle area is: " + circleArea);
+        scanner.close();
     }
 }

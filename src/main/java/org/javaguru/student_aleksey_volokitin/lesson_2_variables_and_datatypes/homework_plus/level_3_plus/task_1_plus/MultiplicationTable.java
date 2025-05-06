@@ -28,5 +28,6 @@ class MultiplicationTable {
         System.out.println(outputString);
         outputString = number + " x 10 = " + number * 10;
         System.out.println(outputString);
+        scanner.close();
     }
 }

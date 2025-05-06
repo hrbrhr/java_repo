@@ -14,5 +14,6 @@ class CalculatePerimeterAndArea {
 
         double area = Math.PI * radius * radius ;
         System.out.println("Area is: " + area);
+        scanner.close();
     }
 }
