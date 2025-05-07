@@ -4,11 +4,13 @@ class Robot {
 
     private String name;
 
-    public Robot(String name) {
+    Robot(String name) {
         this.name = name;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
+
+    void setName(String name) {this.name = name;}
 }
