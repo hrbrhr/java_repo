@@ -1,4 +1,4 @@
-package org.javaguru.student_artjoms_babicevs.lesson_2.Level_6.Task_3;
+package org.javaguru.student_artjoms_babicevs.lesson_2.level_6.task_3;
 
 class AttentionPlease {
 
