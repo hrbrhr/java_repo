@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework.level_4_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_4_plus;
 
 class Circle {
     double calculatePerimeter(double radius) {

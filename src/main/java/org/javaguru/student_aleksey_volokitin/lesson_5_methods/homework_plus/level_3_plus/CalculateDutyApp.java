@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework.level_3_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_3_plus;
 
 class CalculateDutyApp {
     public static void main(String[] args) {
