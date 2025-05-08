@@ -1,4 +1,4 @@
-package org.javaguru.student_artjoms_babicevs.lesson_2.Level_4.Task_1;
+package org.javaguru.student_artjoms_babicevs.lesson_2.level_4.task_1;
 
 import java.util.Scanner;
 
