@@ -1,4 +1,4 @@
-package org.javaguru.student_alexey_yakovlev.lesson_1_software_setup.homework.level_6_middle.task_2;
+package org.javaguru.student_alexey_yakovlev.lesson_1.homework.level_6_middle.task_2;
 
 class Multiplication {
 
