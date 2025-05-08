@@ -4,10 +4,10 @@ public class PupilApplication {
 
     public static void main(String[] args) {
 
-        Pupil pupil1 = new Pupil("Darja",5);
-        Pupil pupil2 = new Pupil("Kostja",4);
-        Pupil pupil3 = new Pupil("Olga",3);
-        Pupil pupil4 = new Pupil("Ivan",5);
+        Pupil pupil1 = new Pupil("Darja Ivanova",5); // new sozdajotsja novyj objekt, dolzhen byt sozdan konstruktor objazateljno
+        Pupil pupil2 = new Pupil("Kostja Petrov",4);
+        Pupil pupil3 = new Pupil("Olga Kostina",3);
+        Pupil pupil4 = new Pupil("Ivan Orlov",5);
 
 
 
