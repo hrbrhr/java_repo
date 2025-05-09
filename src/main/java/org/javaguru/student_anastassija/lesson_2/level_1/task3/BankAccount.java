@@ -1,4 +1,4 @@
-package org.javaguru.student_anastassija.lesson_2.level_1.Task3;
+package org.javaguru.student_anastassija.lesson_2.level_1.task3;
 
 public class BankAccount {
 

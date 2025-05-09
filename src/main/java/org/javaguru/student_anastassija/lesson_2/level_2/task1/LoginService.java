@@ -1,4 +1,4 @@
-package org.javaguru.student_anastassija.lesson_2.level_2.Task1;
+package org.javaguru.student_anastassija.lesson_2.level_2.task1;
 
 public class LoginService {
 
