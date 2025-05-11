@@ -1,11 +1,11 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_3_plus;
 
 class Book {
-    String name;
-    String author;
-    int year;
-    BookChapter chapter1;
-    BookChapter chapter2;
+    private String name;
+    private String author;
+    private int year;
+    private BookChapter chapter1;
+    private BookChapter chapter2;
 
     Book(String name,
          String author,

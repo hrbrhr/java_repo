@@ -1,8 +1,8 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_7_plus.task_3_plus;
 
 class Dog {
-    String dogName;
-    int dogAge;
+    private String dogName;
+    private int dogAge;
 
     Dog(String dogName, int dogAge) {
         this.dogName = dogName;

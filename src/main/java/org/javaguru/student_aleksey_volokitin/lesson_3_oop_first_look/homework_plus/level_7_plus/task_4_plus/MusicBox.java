@@ -1,9 +1,9 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_7_plus.task_4_plus;
 
 class MusicBox {
-    String model;
-    int volumeLevel;
-    boolean isOn;
+    private String model;
+    private int volumeLevel;
+    private boolean isOn;
 
     MusicBox(String model) {
         this.model = model;

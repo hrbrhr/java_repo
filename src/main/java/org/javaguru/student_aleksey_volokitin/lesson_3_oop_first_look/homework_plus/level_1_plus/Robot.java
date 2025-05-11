@@ -1,7 +1,7 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_1_plus;
 
 class Robot {
-    String name;
+    private String name;
     Robot(String name) {
         this.name = name;
     }

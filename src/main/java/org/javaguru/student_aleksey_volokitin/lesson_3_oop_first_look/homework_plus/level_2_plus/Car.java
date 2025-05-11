@@ -1,9 +1,9 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_2_plus;
 
 class Car {
-    String brandModel;
-    String color;
-    int price;
+    private String brandModel;
+    private String color;
+    private int price;
 
     Car(String brandModel, String color, int price) {
         this.brandModel = brandModel;

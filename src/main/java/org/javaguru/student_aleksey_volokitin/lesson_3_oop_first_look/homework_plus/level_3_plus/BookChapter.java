@@ -1,8 +1,8 @@
 package org.javaguru.student_aleksey_volokitin.lesson_3_oop_first_look.homework_plus.level_3_plus;
 
 class BookChapter {
-    String title;
-    String text;
+    private String title;
+    private String text;
 
     BookChapter(String title,
                 String text) {
