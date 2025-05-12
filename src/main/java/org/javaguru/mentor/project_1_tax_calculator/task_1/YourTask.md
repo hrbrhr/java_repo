@@ -38,4 +38,3 @@
 
 - [Телеграм-группа проекта](https://t.me/+mvRhG9YECTlkZjQ0)
 - [Телеграм автора курса](https://t.me/javagurulv)
-- [Email автора курса](mailto:itguruby@mail.ru)
