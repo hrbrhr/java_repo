@@ -10,7 +10,6 @@ class TaxCalculatorApp {
         double income = scanner.nextDouble();
 
         TaxCalculator taxCalculator = new TaxCalculator();
-
         double tax = taxCalculator.calculateTax(income);
         System.out.println("Income: " + income + " , tax value: " + tax);
     }
