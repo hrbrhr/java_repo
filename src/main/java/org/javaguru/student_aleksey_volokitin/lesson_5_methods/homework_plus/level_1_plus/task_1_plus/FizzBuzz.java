@@ -3,7 +3,10 @@ package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.le
 class FizzBuzz {
 
     String convertToString(int inputNumber) {
-        if ((inputNumber % 3 == 0) && (inputNumber % 5 == 0)){
+        if (inputNumber == 0) {
+            return "0";
+        }
+        else if ((inputNumber % 3 == 0) && (inputNumber % 5 == 0)){
             return "FizzBuzz";
         }
         else if (inputNumber % 3 == 0) {
