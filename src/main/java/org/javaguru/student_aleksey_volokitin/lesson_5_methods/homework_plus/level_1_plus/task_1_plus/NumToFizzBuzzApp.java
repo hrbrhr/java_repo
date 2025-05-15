@@ -9,7 +9,6 @@ class NumToFizzBuzzApp {
         int number = scanner.nextInt();
 
         FizzBuzz toFizzBuzz = new FizzBuzz();
-
         System.out.println("Convert " + number + " to string: " + toFizzBuzz.convertToString(number));
         scanner.close();
     }

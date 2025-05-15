@@ -6,14 +6,16 @@ class FraudDetectorApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the name of trader: ");
+        System.out.print("Enter a name of trader: ");
         String traderFullName = scanner.nextLine();
-        System.out.print("Enter the city of trader: ");
+        System.out.print("Enter a city of trader: ");
         String traderCity = scanner.nextLine();
+        System.out.print("Enter a country of trader: ");
+        String traderCountry = scanner.nextLine();
         System.out.print("Enter amount of transaction: ");
         int transactionAmount = Integer.parseInt(scanner.nextLine());
 
-        Trader trader1 = new Trader(traderFullName, traderCity);
+        Trader trader1 = new Trader(traderFullName, traderCity, traderCountry);
         Transaction transaction1 = new Transaction(trader1, transactionAmount);
 
         FraudDetector fraudDetector1 = new FraudDetector();
