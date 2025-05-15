@@ -1,6 +1,7 @@
 package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector;
 
 class FraudDetectorTest {
+/*
     public static void main(String[] args) {
         FraudDetectorTest fraudDetectorTest = new FraudDetectorTest();
         // Testing Rule 1
@@ -67,4 +68,6 @@ class FraudDetectorTest {
         if (expectedResult == result) { System.out.println("Test 5 - OK"); }
         else                          { System.out.println("Test 5 - FAIL"); }
     }
+
+ */
 }

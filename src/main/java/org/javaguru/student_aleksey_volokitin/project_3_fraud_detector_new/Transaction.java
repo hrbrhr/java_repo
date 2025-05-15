@@ -1,8 +1,6 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
 
 class Transaction {
-
-    /*
     Trader trader;
     int amount;
 
@@ -13,6 +11,4 @@ class Transaction {
 
     Trader getTrader() { return trader; }
     int getAmount()    { return amount; }
-
- */
 }

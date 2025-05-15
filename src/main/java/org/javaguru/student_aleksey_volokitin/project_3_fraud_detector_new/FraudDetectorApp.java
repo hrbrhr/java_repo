@@ -1,11 +1,9 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
 
 import java.util.Scanner;
 
 class FraudDetectorApp {
-/*
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the name of trader: ");
@@ -28,6 +26,4 @@ class FraudDetectorApp {
             System.out.println("Transaction completed!");
         }
     }
-
- */
 }

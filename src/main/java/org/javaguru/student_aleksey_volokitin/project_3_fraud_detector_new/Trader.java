@@ -1,7 +1,7 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
 
 class Trader {
-/*
+
     private String fullName;
     private String city;
 
@@ -12,6 +12,5 @@ class Trader {
 
     String getFullName() { return fullName; }
     String getCity()     { return city; }
-
- */
 }
+
