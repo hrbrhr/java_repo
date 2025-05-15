@@ -8,10 +8,10 @@ public class DoctorTimetableApp {
         PatientVisit visitMorning = new PatientVisit("Lubov", "Kablukova", "cold", 100);
         PatientVisit visitAfternoon = new PatientVisit("Nikolai", "Bochkin", "cold", 200);
 
-        Doctor docOne = new Doctor("Oleg", "Ivanov", "terapist", "15.05.2025", visitMorning);
-        Doctor docTwo = new Doctor("Olga", "Petrova", "surgeon", "15.05.2025", visitAfternoon);
+        Doctor docOne = new Doctor("Oleg", "Ivanov", "terapist", "15.05.2025", visitMorning, null);
+        Doctor docTwo = new Doctor("Olga", "Petrova", "surgeon", "15.05.2025", null,visitAfternoon);
 
         System.out.println(docOne.getName() + " " + docOne.getSurname() + " " + docOne.getSpec() + " " + docOne.getDate() + " " + docOne.getPatientNameMorning() + " " + docOne.getPatientSurnameMorning() + " " + docOne.getPatientDiagnosisMorning() + " " + docOne.getVisitCostMorning());
-        //System.out.println(docTwo.getName() + " " + docTwo.getSurname() + " " + docTwo.getSpec() + " " + docTwo.getDate() + " " + docTwo.getPatientNameAfternoon() + " " + docTwo.getPatientSurnameAfternoon() + " " + docTwo.getPatientDiagnosisAfternoon() + " " + docTwo.getVisitCostAfternoon());
+        System.out.println(docTwo.getName() + " " + docTwo.getSurname() + " " + docTwo.getSpec() + " " + docTwo.getDate() + " " + docTwo.getPatientNameAfternoon() + " " + docTwo.getPatientSurnameAfternoon() + " " + docTwo.getPatientDiagnosisAfternoon() + " " + docTwo.getVisitCostAfternoon());
     }
 }
