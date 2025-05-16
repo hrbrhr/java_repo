@@ -2,7 +2,7 @@ package org.javaguru.student_artjoms_babicevs.lesson_4.level_3;
 
 import java.util.Scanner;
 
-public class MaxOffThree {
+public class MaxOfThree {
 
 
 
