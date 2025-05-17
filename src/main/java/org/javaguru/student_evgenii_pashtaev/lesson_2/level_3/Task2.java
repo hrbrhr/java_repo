@@ -1,7 +1,7 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_2.level_3;
 import java.util.Scanner;
 
-public class Task2 {
+class Task2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double r = input.nextDouble();

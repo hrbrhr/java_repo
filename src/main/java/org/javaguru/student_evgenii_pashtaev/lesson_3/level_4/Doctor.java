@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_3.level_4;
 
-public class Doctor {
+class Doctor {
     String name;
     String surname;
     String spec;

@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_3.level_4;
 
-public class DoctorTimetableApp {
+class DoctorTimetableApp {
 
     public static void main(String[] args) {
 
