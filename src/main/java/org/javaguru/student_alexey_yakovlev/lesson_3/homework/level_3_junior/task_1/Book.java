@@ -5,14 +5,14 @@ class Book {
     private String name;
     private String author;
     private int yearOfIssue;
-    private ChapterOne chapterOne;
-    private ChapterTwo chapterTwo;
+    private Chapter chapter1;
+    private Chapter chapter2;
 
-    public Book(String name, String author, int yearOfIssue, ChapterOne chapterOne, ChapterTwo chapterTwo) {
+    public Book(String name, String author, int yearOfIssue, Chapter chapter1, Chapter chapter2) {
         this.name = name;
         this.author = author;
         this.yearOfIssue = yearOfIssue;
-        this.chapterOne = chapterOne;
-        this.chapterTwo = chapterTwo;
+        this.chapter1 = chapter1;
+        this.chapter2 = chapter2;
     }
 }
