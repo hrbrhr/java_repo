@@ -1,6 +1,6 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_4.lessoncode;
 
-public class BooleanExample {
+class BooleanExample {
 
     public static void main(String[] args) {
 

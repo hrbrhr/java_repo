@@ -2,7 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_4.lessoncode;
 
 import java.util.Scanner;
 
-public class NoRangeNumbers {
+class NoRangeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число:");

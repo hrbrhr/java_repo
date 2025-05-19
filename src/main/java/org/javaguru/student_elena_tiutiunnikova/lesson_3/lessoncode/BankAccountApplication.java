@@ -1,6 +1,6 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_3.lessoncode;
 
-public class BankAccountApplication {
+class BankAccountApplication {
 
     public static void main(String[] args) {
         // create

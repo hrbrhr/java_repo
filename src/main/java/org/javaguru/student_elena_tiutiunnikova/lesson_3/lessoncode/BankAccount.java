@@ -1,6 +1,6 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_3.lessoncode;
 
-public class BankAccount  {
+class BankAccount  {
 
     private String owner;
     private int money;
