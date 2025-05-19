@@ -1,8 +1,8 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
 
 class Transaction {
-    Trader trader;
-    int amount;
+    private Trader trader;
+    private int amount;
 
     Transaction(Trader trader, int amount) {
         this.trader = trader;

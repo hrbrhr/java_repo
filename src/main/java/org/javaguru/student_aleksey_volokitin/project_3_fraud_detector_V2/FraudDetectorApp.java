@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
 
 import java.util.Scanner;
 
@@ -7,13 +7,14 @@ class FraudDetectorApp {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a name of trader: ");
-        String traderFullName = scanner.nextLine();
+        String traderFullName = scanner.nextLine().strip();
         System.out.print("Enter a city of trader: ");
-        String traderCity = scanner.nextLine();
+        String traderCity = scanner.nextLine().strip();
         System.out.print("Enter a country of trader: ");
-        String traderCountry = scanner.nextLine();
+        String traderCountry = scanner.nextLine().strip();
         System.out.print("Enter amount of transaction: ");
-        int transactionAmount = Integer.parseInt(scanner.nextLine());
+
+        int transactionAmount = Integer.parseInt(scanner.nextLine().strip());
 
         Trader trader1 = new Trader(traderFullName, traderCity, traderCountry);
         Transaction transaction1 = new Transaction(trader1, transactionAmount);

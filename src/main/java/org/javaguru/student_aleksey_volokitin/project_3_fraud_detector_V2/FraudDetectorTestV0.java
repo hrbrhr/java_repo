@@ -1,8 +1,8 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_new;
+package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
 
-class FraudDetectorTest {
+class FraudDetectorTestV0 {
     public static void main(String[] args) {
-        FraudDetectorTest fraudDetectorTest = new FraudDetectorTest();
+        FraudDetectorTestV0 fraudDetectorTest = new FraudDetectorTestV0();
 
         // Testing Rule 1
         fraudDetectorTest.test1();
@@ -23,6 +23,12 @@ class FraudDetectorTest {
         fraudDetectorTest.test13();
         fraudDetectorTest.test14();
         fraudDetectorTest.test15();
+        // Testing Rule 5
+        fraudDetectorTest.test16();
+        fraudDetectorTest.test17();
+        fraudDetectorTest.test18();
+        fraudDetectorTest.test19();
+
     }
     // Tests for Rule 1
     void test1() {
@@ -194,5 +200,49 @@ class FraudDetectorTest {
 
         if (expectedResult == result) { System.out.println("Test 15 - OK"); }
         else                          { System.out.println("Test 15 - FAIL"); }
+    }
+    void test16() {
+        Trader trader1 = new Trader("Hans", "Berlin", "Germany");
+        Transaction transaction1 = new Transaction(trader1, 500);
+        boolean expectedResult = false;
+
+        FraudDetector fraudDetector1 = new FraudDetector();
+        boolean result = fraudDetector1.isFraud(transaction1);
+
+        if (expectedResult == result) { System.out.println("Test 16 - OK"); }
+        else                          { System.out.println("Test 16 - FAIL"); }
+    }
+    void test17() {
+        Trader trader1 = new Trader("Hans", "Berlin", "Germany");
+        Transaction transaction1 = new Transaction(trader1, 1000);
+        boolean expectedResult = false;
+
+        FraudDetector fraudDetector1 = new FraudDetector();
+        boolean result = fraudDetector1.isFraud(transaction1);
+
+        if (expectedResult == result) { System.out.println("Test 17 - OK"); }
+        else                          { System.out.println("Test 17 - FAIL"); }
+    }
+    void test18() {
+        Trader trader1 = new Trader("Hans", "Berlin", "Germany");
+        Transaction transaction1 = new Transaction(trader1, 1001);
+        boolean expectedResult = true;
+
+        FraudDetector fraudDetector1 = new FraudDetector();
+        boolean result = fraudDetector1.isFraud(transaction1);
+
+        if (expectedResult == result) { System.out.println("Test 18 - OK"); }
+        else                          { System.out.println("Test 18 - FAIL"); }
+    }
+    void test19() {
+        Trader trader1 = new Trader("Hans", "Berlin", "Germany2");
+        Transaction transaction1 = new Transaction(trader1, 1001);
+        boolean expectedResult = false;
+
+        FraudDetector fraudDetector1 = new FraudDetector();
+        boolean result = fraudDetector1.isFraud(transaction1);
+
+        if (expectedResult == result) { System.out.println("Test 19 - OK"); }
+        else                          { System.out.println("Test 19 - FAIL"); }
     }
 }
