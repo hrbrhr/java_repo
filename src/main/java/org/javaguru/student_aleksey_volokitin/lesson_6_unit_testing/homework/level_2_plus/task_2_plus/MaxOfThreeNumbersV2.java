@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2.task_2_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2_plus.task_2_plus;
 
 class MaxOfThreeNumbersV2 {
 

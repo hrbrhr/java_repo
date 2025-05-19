@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2.task_1_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2_plus.task_1_plus;
 
 class PalindromeCheckerTest {
     public static void main(String[] args) {

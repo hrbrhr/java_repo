@@ -1,14 +1,14 @@
-package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2.task_2_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_2_plus.task_2_plus;
 
-class MaxOfThreeNumbersV1Test {
+class MaxOfThreeNumbersV2Test {
     public static void main(String[] args) {
-        MaxOfThreeNumbersV1Test maxOfThreeNumbersV1Test = new MaxOfThreeNumbersV1Test();
-        maxOfThreeNumbersV1Test.test1();
-        maxOfThreeNumbersV1Test.test2();
-        maxOfThreeNumbersV1Test.test3();
-        maxOfThreeNumbersV1Test.test4();
-        maxOfThreeNumbersV1Test.test5();
-        maxOfThreeNumbersV1Test.test6();
+        MaxOfThreeNumbersV2Test maxOfThreeNumbersV2Test = new MaxOfThreeNumbersV2Test();
+        maxOfThreeNumbersV2Test.test1();
+        maxOfThreeNumbersV2Test.test2();
+        maxOfThreeNumbersV2Test.test3();
+        maxOfThreeNumbersV2Test.test4();
+        maxOfThreeNumbersV2Test.test5();
+        maxOfThreeNumbersV2Test.test6();
     }
 
     //  1   1   2   2   3   3
@@ -20,7 +20,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 3;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 1 - OK"); }
         else                          { System.out.println("Test 1 - FAIL"); }
@@ -32,7 +32,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 2;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 2 - OK"); }
         else                          { System.out.println("Test 2 - FAIL"); }
@@ -44,7 +44,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 3;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 3 - OK"); }
         else                          { System.out.println("Test 3 - FAIL"); }
@@ -56,7 +56,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 1;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 4 - OK"); }
         else                          { System.out.println("Test 4 - FAIL"); }
@@ -68,7 +68,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 2;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 5 - OK"); }
         else                          { System.out.println("Test 5 - FAIL"); }
@@ -80,7 +80,7 @@ class MaxOfThreeNumbersV1Test {
         int num3 = 1;
         int expectedResult = 3;
 
-        MaxOfThreeNumbersV1 maxOfThreeNumbers = new MaxOfThreeNumbersV1();
+        MaxOfThreeNumbersV2 maxOfThreeNumbers = new MaxOfThreeNumbersV2();
         int result = maxOfThreeNumbers.findMax(num1, num2, num3);
         if (result == expectedResult) { System.out.println("Test 6 - OK"); }
         else                          { System.out.println("Test 6 - FAIL"); }
