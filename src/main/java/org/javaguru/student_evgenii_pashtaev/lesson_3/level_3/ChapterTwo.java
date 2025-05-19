@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_3.level_3;
 
-public class ChapterTwo{
+class ChapterTwo{
 
     String chapterTwoName;
     String textTwo;

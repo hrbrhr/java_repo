@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_3.level_3;
 
-public class Book {
+class Book {
 
     private String name;
     String author;
@@ -8,7 +8,7 @@ public class Book {
     private final ChapterOne chapterOne;
     private final ChapterTwo chapterTwo;
 
-    public Book(String name, String author, int since, ChapterOne chapterOne, ChapterTwo chapterTwo) {
+    Book(String name, String author, int since, ChapterOne chapterOne, ChapterTwo chapterTwo) {
         this.name = name;
         this.author = author;
         this.since = since;

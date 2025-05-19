@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_3.level_2;
 
-public class CarApp {
+class CarApp {
 
     public static void main(String[] args) {
 
