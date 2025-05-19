@@ -2,7 +2,7 @@ package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
 
 import java.util.Scanner;
 
-class FraudDetectorApp {
+class FraudDetectorAppV0 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,11 +16,11 @@ class FraudDetectorApp {
 
         int transactionAmount = Integer.parseInt(scanner.nextLine().strip());
 
-        Trader trader1 = new Trader(traderFullName, traderCity, traderCountry);
-        Transaction transaction1 = new Transaction(trader1, transactionAmount);
+        Trader trader = new Trader(traderFullName, traderCity, traderCountry);
+        Transaction transaction = new Transaction(trader, transactionAmount);
 
-        FraudDetector fraudDetector1 = new FraudDetector();
-        boolean isFraud = fraudDetector1.isFraud(transaction1);
+        FraudDetectorV0 fraudDetector = new FraudDetectorV0();
+        boolean isFraud = fraudDetector.isFraud(transaction);
 
         if (isFraud) {
             System.out.println("Fraud detected!!!");

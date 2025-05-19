@@ -1,7 +1,7 @@
 package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_3_plus;
 
-class Duty {
-    double calculateDuty(double amount) {
+class Tax {
+    double calculateTax(double amount) {
         if (amount < 10000) {
             return Math.ceil(amount * 0.3d * 100) / 100;
         }

@@ -1,6 +1,6 @@
 package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
 
-class FraudDetector {
+class FraudDetectorV2 {
     boolean isFraud(Transaction transaction) {
 
         return new FraudRule1().isFraud(transaction) ||
@@ -9,5 +9,6 @@ class FraudDetector {
                new FraudRule4().isFraud(transaction) ||
                new FraudRule5().isFraud(transaction) ||
                new FraudRule6().isFraud(transaction);
+        // Добавить новые правила
     }
 }
