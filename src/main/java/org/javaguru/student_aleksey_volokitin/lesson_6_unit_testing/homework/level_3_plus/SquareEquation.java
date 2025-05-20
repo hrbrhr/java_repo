@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_3;
+package org.javaguru.student_aleksey_volokitin.lesson_6_unit_testing.homework.level_3_plus;
 
 class SquareEquation {
 
