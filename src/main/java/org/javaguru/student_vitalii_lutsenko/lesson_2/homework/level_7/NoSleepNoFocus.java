@@ -1,4 +1,4 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_2.homework.llevel_7.homework;
+package org.javaguru.student_vitalii_lutsenko.lesson_2.homework.level_7;
 
 public class NoSleepNoFocus {
 

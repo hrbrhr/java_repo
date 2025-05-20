@@ -1,4 +1,4 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_2.homework.llevel_3;
+package org.javaguru.student_vitalii_lutsenko.lesson_2.homework.level_3;
 
 
 import java.util.Scanner;
