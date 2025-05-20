@@ -1,4 +1,4 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_2.Level_5.Task_1;
+package org.javaguru.student_vitalii_lutsenko.lesson_2.homework.level_5.Task_1;
 
 class SizeMatters {
 
