@@ -45,6 +45,8 @@ class Year {
             case 12:
                 System.out.println("Зима");
                 break;
+            default:
+                System.out.println("Месяца с таким порядковым номером не существует!");
         }
     }
 }
