@@ -28,6 +28,7 @@ class CatalogCarsApp {
         Car2.setColor("brown");
         Car2.setPrice(200);
 
+
         Car3.setBrand("Ford");
         Car3.setColor("white");
         Car3.setPrice(110);
