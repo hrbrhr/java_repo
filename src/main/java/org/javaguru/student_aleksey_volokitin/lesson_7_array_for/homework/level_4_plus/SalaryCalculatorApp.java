@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_7_array_for.homework.level_4;
+package org.javaguru.student_aleksey_volokitin.lesson_7_array_for.homework.level_4_plus;
 
 class SalaryCalculatorApp {
     public static void main(String[] args) {

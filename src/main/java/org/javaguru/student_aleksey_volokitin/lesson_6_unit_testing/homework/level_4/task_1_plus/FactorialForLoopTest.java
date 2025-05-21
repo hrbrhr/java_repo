@@ -17,7 +17,7 @@ class FactorialForLoopTest {
 
         int result = factorial.factorial(number);
 
-        printResult(expectedResult, result, testTitle);
+        checkResult(expectedResult, result, testTitle);
     }
 
     void testFactorialOfOne() {
@@ -28,7 +28,7 @@ class FactorialForLoopTest {
 
         int result = factorial.factorial(number);
 
-        printResult(expectedResult, result, testTitle);
+        checkResult(expectedResult, result, testTitle);
     }
 
     void testFactorial() {
@@ -39,10 +39,10 @@ class FactorialForLoopTest {
 
         int result = factorial.factorial(number);
 
-        printResult(expectedResult, result, testTitle);
+        checkResult(expectedResult, result, testTitle);
     }
 
-    void printResult(int expectedResult, int result, String testTitle) {
+    void checkResult(int expectedResult, int result, String testTitle) {
         if (expectedResult == result) {
             System.out.println(testTitle + " - OK");
         }
