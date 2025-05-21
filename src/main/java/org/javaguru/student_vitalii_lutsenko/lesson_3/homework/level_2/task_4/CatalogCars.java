@@ -1,4 +1,4 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_3;
+package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_4;
 
 class CatalogCars {
 
@@ -21,14 +21,13 @@ class CatalogCars {
     int getPrice(){
         return this.price;
     }
-    public void setBrand (String brand){
+    void setBrand (String brand) {
          this.brand = brand;
     }
-    public void setColor(String color) {
+    void setColor(String color) {
          this.color = color;
      }
-
-    public void setPrice(int price) {
+    void setPrice(int price) {
         this.price = price;
     }
 }

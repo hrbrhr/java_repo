@@ -1,4 +1,4 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_3;
+package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_4;
 
 class CatalogCarsApp {
 

@@ -6,17 +6,14 @@ class CatalogCars {
     private String color;
     private int price;
 
-    public CatalogCars(String brand, String color, int price); {
+
+    CatalogCars(String brand, String color, int price){
 
         this.brand = brand;
         this.color = color;
         this.price = price;
 
     }
-
-
-
-
 
 
 
