@@ -1,10 +1,12 @@
 package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_4;
 
-class CatalogCars {
+ class CatalogCars {
 
     private String brand;
     private String color;
     private int price;
+
+
 
      CatalogCars(String brand, String color, int price) {
 
@@ -30,4 +32,5 @@ class CatalogCars {
     void setPrice(int price) {
         this.price = price;
     }
+
 }
