@@ -7,15 +7,11 @@ class CatalogCars {
     private int price;
 
 
-    CatalogCars(String brand, String color, int price){
+    public CatalogCars(String brand, String color, int price){
 
         this.brand = brand;
         this.color = color;
         this.price = price;
-
     }
-
-
-
 
 }

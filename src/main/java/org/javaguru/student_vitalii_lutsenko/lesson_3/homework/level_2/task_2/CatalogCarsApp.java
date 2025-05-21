@@ -7,9 +7,6 @@ class CatalogCarsApp {
         CatalogCars Car1 = new CatalogCars("Audi", "Black",100);
         CatalogCars Car2 = new CatalogCars("BMW", "Green",150);
         CatalogCars Car3 = new CatalogCars("Volvo", "Blue",90);
-
     }
-
-
 
 }

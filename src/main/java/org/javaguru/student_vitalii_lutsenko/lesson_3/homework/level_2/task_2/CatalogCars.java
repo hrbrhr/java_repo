@@ -2,11 +2,11 @@ package org.javaguru.student_vitalii_lutsenko.lesson_3.homework.level_2.task_2;
 
 class CatalogCars {
 
-    private String brand;
-    private String color;
-    private int price;
+    public String brand;
+    public String color;
+    public int price;
 
-    public CatalogCars(String brand, String color, int price){
+     CatalogCars(String brand, String color, int price){
 
         this.brand = brand;
         this.color = color;
