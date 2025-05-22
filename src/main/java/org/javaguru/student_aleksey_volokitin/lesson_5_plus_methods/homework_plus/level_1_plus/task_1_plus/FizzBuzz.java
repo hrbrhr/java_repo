@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_1_plus.task_1_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_5_plus_methods.homework_plus.level_1_plus.task_1_plus;
 
 class FizzBuzz {
 
