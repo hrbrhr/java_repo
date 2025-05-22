@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_5_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_5_plus_methods.homework_plus.level_5_plus;
 
 class ComplicatedPercent {
     // формула сложного процента: A = P * (1 + (r / n))^(n * t)

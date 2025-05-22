@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_5_methods.homework_plus.level_6_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_5_plus_methods.homework_plus.level_6new_plus;
 
 class SchoolSubject {
     String name;
