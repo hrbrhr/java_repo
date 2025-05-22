@@ -1,0 +1,10 @@
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int number = scanner.nextInt();
+
+import java.util.Locale;
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in).useLocale(Locale.US); // - для вещественных чисел с российскими региональными стандартами
+System.out.print("Enter a radius of circle: ");
+double radius = scanner.nextDouble();
