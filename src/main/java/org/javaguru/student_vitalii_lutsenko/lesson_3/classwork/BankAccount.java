@@ -7,12 +7,11 @@ class BankAccount {
     private int money;
 
     BankAccount() {
-
     }
+
     BankAccount(String owner, int money){
      this.owner = owner;
      this.money = money;
-
     }
 
     BankAccount(String owner) {
@@ -25,9 +24,13 @@ class BankAccount {
         this.money = money;
     }
 
-    String getOwner() {return this.owner;}
+    String getOwner() {
+        return this.owner;
+    }
+    int getMoney() {
+        return this.money;
+    }
 
-    int getMoney() {return this.money;}
 
 
 

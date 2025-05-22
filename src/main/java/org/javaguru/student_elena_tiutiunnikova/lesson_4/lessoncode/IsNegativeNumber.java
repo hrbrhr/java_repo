@@ -2,7 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_4.lessoncode;
 
 import java.util.Scanner;
 
-public class IsNegativeNumber {
+class IsNegativeNumber {
 
     public static void main(String[] args) {
 
