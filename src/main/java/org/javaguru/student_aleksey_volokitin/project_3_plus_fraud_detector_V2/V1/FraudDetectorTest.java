@@ -1,8 +1,8 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
+package org.javaguru.student_aleksey_volokitin.project_3_plus_fraud_detector_V2.V1;
 
-class FraudDetectorTestV1 {
+class FraudDetectorTest {
     public static void main(String[] args) {
-        FraudDetectorTestV1 fraudDetectorTest = new FraudDetectorTestV1();
+        FraudDetectorTest fraudDetectorTest = new FraudDetectorTest();
 
         // Testing Rule 1
         fraudDetectorTest.rule1Test1();

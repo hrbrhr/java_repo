@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
+package org.javaguru.student_aleksey_volokitin.project_3_plus_fraud_detector_V2.V1;
 
 class FraudRule2 {
     boolean isFraud(Transaction transaction) {

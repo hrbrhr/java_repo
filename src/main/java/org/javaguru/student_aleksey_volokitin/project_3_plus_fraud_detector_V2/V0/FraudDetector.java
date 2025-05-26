@@ -1,6 +1,6 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
+package org.javaguru.student_aleksey_volokitin.project_3_plus_fraud_detector_V2.V0;
 
-class FraudDetectorV0 {
+class FraudDetector {
     boolean isFraud(Transaction transaction) {
         Trader trader = transaction.getTrader();
 

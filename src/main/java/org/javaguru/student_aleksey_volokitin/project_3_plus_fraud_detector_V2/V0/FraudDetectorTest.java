@@ -1,8 +1,8 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_V2;
+package org.javaguru.student_aleksey_volokitin.project_3_plus_fraud_detector_V2.V0;
 
-class FraudDetectorTestV0 {
+class FraudDetectorTest {
     public static void main(String[] args) {
-        FraudDetectorTestV0 fraudDetectorTest = new FraudDetectorTestV0();
+        FraudDetectorTest fraudDetectorTest = new FraudDetectorTest();
 
         // Testing Rule 1
         fraudDetectorTest.test1();
@@ -36,7 +36,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 1 - OK"); }
@@ -47,7 +47,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 2000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 2 - OK"); }
@@ -58,7 +58,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 2000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 3 - OK"); }
@@ -69,7 +69,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 2000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 4 - OK"); }
@@ -80,7 +80,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 2000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 5 - OK"); }
@@ -93,7 +93,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 999999);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 6 - OK"); }
@@ -104,7 +104,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1000000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 7 - OK"); }
@@ -115,7 +115,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1000001);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 8 - OK"); }
@@ -128,7 +128,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 9 - OK"); }
@@ -139,7 +139,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 10 - OK"); }
@@ -150,7 +150,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 11 - OK"); }
@@ -161,7 +161,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 12 - OK"); }
@@ -173,7 +173,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 13 - OK"); }
@@ -184,7 +184,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 14 - OK"); }
@@ -195,7 +195,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 10000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 15 - OK"); }
@@ -206,7 +206,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 500);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 16 - OK"); }
@@ -217,7 +217,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1000);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 17 - OK"); }
@@ -228,7 +228,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1001);
         boolean expectedResult = true;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 18 - OK"); }
@@ -239,7 +239,7 @@ class FraudDetectorTestV0 {
         Transaction transaction1 = new Transaction(trader1, 1001);
         boolean expectedResult = false;
 
-        FraudDetectorV1 fraudDetector1 = new FraudDetectorV1();
+        FraudDetector fraudDetector1 = new FraudDetector();
         boolean result = fraudDetector1.isFraud(transaction1);
 
         if (expectedResult == result) { System.out.println("Test 19 - OK"); }
