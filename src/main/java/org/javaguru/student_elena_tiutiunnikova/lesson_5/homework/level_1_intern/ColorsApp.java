@@ -10,11 +10,11 @@ class ColorsApp {
 
         Colors colors2 = new Colors();
         int wave2 = 576;
-        System.out.println(colors1.waveLength(wave2));
+        System.out.println(colors2.waveLength(wave2));
 
         Colors colors3 = new Colors();
         int wave3 = 98;
-        System.out.println(colors1.waveLength(wave3));
+        System.out.println(colors3.waveLength(wave3));
 
     }
 }
