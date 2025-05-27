@@ -4,25 +4,43 @@ import java.util.Scanner;
 
 class ThreeNumbersMax {
 
-    private static int max(int number1, int number2) {
+   // private static int max(int number1, int number2) {
 
-        return (number1 > number2) ? number1 : number2;
-    }
+        //return (number1 > number2) ? number1 : number2;
+   // }
 
     public static void main(String[]args) {
         Scanner scanner = new Scanner(System.in);
 
+
         System.out.print("Enter number1: ");
-        int number1 = scanner.nextInt();
+        int a = scanner.nextInt();
         System.out.print("Enter number2: ");
-        int number2 = scanner.nextInt();
+        int b = scanner.nextInt();
         System.out.print("Enter number3: ");
-        int number3 = scanner.nextInt();
+        int c = scanner.nextInt();
 
-        int maxNumber = max(number1,number2);
-        maxNumber = max(maxNumber,number3);
+        //int maxNumber = max(number1,number2);
+       // maxNumber = max(maxNumber,number3);
 
-        System.out.println("Max number = " + maxNumber);
+        //System.out.println("Max number = " + maxNumber);
+        int max;
+
+        if (a > b) {
+            if (a > c) {
+                max = a;
+            } else {
+                max = c;
+            }
+        } else {
+            if (b > c) {
+                max = b;
+            } else {
+                max = c;
+            }
+        }
+        System.out.println("Max number from three = " + max);
+
 
 
     }

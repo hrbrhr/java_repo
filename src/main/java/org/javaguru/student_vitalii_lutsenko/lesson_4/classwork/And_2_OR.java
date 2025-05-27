@@ -5,7 +5,7 @@ public class And_2_OR {
     public static void main(String[]args){
 
         int number = 7;
-        if ((number >=1) || (number <=10)){
+        if ((number >= 1) || (number <= 10)){
 
             System.out.println("Number is inside range (1-10)!");
         } else {
