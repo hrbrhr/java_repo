@@ -1,36 +1,42 @@
 Последний шаг - это рефакторинг! Наше решение протестировано и работает.
 Теперь мы его можем улучшить без изменения функциональности.
 
-В классе ProductValidatorImpl есть повторяющийся код - три блока try.
-Для избавления от дублирования кода воспользуемся интерфейсом ProductValidationRule:
+В классе ProductValidatorImpl есть повторяющийся код - три блока try:
 
 class ProductValidatorImpl implements ProductValidator {
 
-    private List<ProductValidationRule> validationRules = new ArrayList<>();
+    private ProductTitleValidationRule titleValidationRule;
+    private ProductPriceValidationRule priceValidationRule;
+    private ProductDescriptionValidationRule descriptionValidationRule;
 
     public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule,
                                 ProductPriceValidationRule priceValidationRule,
                                 ProductDescriptionValidationRule descriptionValidationRule) {
-        validationRules.add(titleValidationRule);
-        validationRules.add(priceValidationRule);
-        validationRules.add(descriptionValidationRule);
+        this.titleValidationRule = titleValidationRule;
+        this.priceValidationRule = priceValidationRule;
+        this.descriptionValidationRule = descriptionValidationRule;
     }
 
     public List<ValidationException> validate(Product product) {
         List<ValidationException> exceptions = new ArrayList<>();
-        for (ProductValidationRule validationRule : validationRules) {
-            try {
-                validationRule.validate(product);
-            } catch (ValidationException e) {
-                exceptions.add(e);
-            }
+        try {
+            titleValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
+        }
+        try {
+            priceValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
+        }
+        try {
+            descriptionValidationRule.validate(product);
+        } catch (ValidationException e) {
+            exceptions.add(e);
         }
         return exceptions;
     }
 
 }
 
-Убедитесь, что после нашего рефакторинга все тесты по-прежнему проходят!
-
-Поздравляем, вы успешно завершили разработку прототипа функциональности
-по валидации данных продукта! Вы большие молодцы!
+Придумайте способ как упростить этот код!

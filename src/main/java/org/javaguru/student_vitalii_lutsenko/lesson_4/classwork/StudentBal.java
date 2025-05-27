@@ -2,7 +2,7 @@ package org.javaguru.student_vitalii_lutsenko.lesson_4.classwork;
 
 import java.util.Scanner;
 
-public class StudentBal {
+ class StudentBal {
 
     public static void main(String[]args) {
         Scanner scanner = new Scanner(System.in);

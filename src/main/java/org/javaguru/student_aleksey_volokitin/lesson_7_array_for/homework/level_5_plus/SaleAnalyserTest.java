@@ -15,7 +15,7 @@ class SaleAnalyserTest {
         SaleAnalyser saleAnalyser = new SaleAnalyser();
 
         String expectedResult = "No products were selling";
-        String testTitle = "Test 1: find best selling product when ero sales:";
+        String testTitle = "Test 1: find best selling product when zero sales:";
         String realResult = saleAnalyser.findBestSellingProduct(sales);
         checkResult(expectedResult, realResult, testTitle);
     }
@@ -29,7 +29,7 @@ class SaleAnalyserTest {
         SaleAnalyser saleAnalyser = new SaleAnalyser();
 
         String expectedResult = "Milk";
-        String testTitle = "Test 2: find best selling product when ero sales:";
+        String testTitle = "Test 2: find best selling product when zero sales:";
         String realResult = saleAnalyser.findBestSellingProduct(sales);
         checkResult(expectedResult, realResult, testTitle);
     }
