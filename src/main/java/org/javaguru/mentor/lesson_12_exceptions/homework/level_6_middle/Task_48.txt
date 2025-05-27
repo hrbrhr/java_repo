@@ -6,7 +6,7 @@
 
 class ProductValidatorImpl implements ProductValidator {
 
-    private List<ProductValidationRule> validationRules = new ArrayList<>();
+    private List<FieldValidationRule> validationRules = new ArrayList<>();
 
     public ProductValidatorImpl(ProductTitleValidationRule titleValidationRule,
                                 ProductPriceValidationRule priceValidationRule,
@@ -18,7 +18,7 @@ class ProductValidatorImpl implements ProductValidator {
 
     public List<ValidationException> validate(Product product) {
         List<ValidationException> exceptions = new ArrayList<>();
-        for (ProductValidationRule validationRule : validationRules) {
+        for (FieldValidationRule validationRule : validationRules) {
             try {
                 validationRule.validate(product);
             } catch (ValidationException e) {
