@@ -8,6 +8,7 @@ class FizzBuzzTest {
         test.testCase2();
         test.testCase3();
         test.testCase4();
+        test.testCase5();
     }
 
     // test case 1:  3 -> "Fizz"
@@ -54,5 +55,15 @@ class FizzBuzzTest {
         }
     }
 
+    // test case 5:  0 -> "?"
+    public void testCase5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.detect(0);
+        if (result.equals("0")) {
+            System.out.println("Test 5 = OK");
+        } else {
+            System.out.println("Test 5 = FAIL");
+        }
+    }
 
 }
