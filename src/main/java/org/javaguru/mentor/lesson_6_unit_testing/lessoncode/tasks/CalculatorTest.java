@@ -6,6 +6,11 @@ class CalculatorTest {
         CalculatorTest test = new CalculatorTest();
         test.test1();
         test.test2();
+        test.test3();
+        test.test4();
+        test.test5();
+        test.test6();
+        test.test7();
     }
 
     // 2 -> true
@@ -37,5 +42,78 @@ class CalculatorTest {
     }
 
 
+    // 2 -> false
+    public void test3() {
+        int number = 2;
+
+        Calculator calculator = new Calculator();
+        boolean realResult = calculator.isOdd(number);
+
+        if (realResult == false) {
+            System.out.println("TEST 3 = OK");
+        } else {
+            System.out.println("TEST 3 = FAIL");
+        }
+    }
+
+    // 3 -> true
+    public void test4() {
+        int number = 3;
+
+        Calculator calculator = new Calculator();
+        boolean realResult = calculator.isOdd(number);
+
+        if (realResult == true) {
+            System.out.println("TEST 4 = OK");
+        } else {
+            System.out.println("TEST 4 = FAIL");
+        }
+    }
+
+    // findAverage(number1, number2)
+    // 2, 4 -> 3.0
+    public void test5() {
+        int number1 = 2;
+        int number2 = 4;
+
+        Calculator calculator = new Calculator();
+        double realResult = calculator.findAverage(number1, number2);
+
+        if (Math.abs(realResult - 3.0) < 0.00001) {
+            System.out.println("TEST 5 = OK");
+        } else {
+            System.out.println("TEST 5 = FAIL");
+        }
+    }
+
+    // 10, 1 -> 5.5
+    public void test6() {
+        int number1 = 10;
+        int number2 = 1;
+
+        Calculator calculator = new Calculator();
+        double realResult = calculator.findAverage(number1, number2);
+
+        if (Math.abs(realResult - 5.5) < 0.00001) {
+            System.out.println("TEST 6 = OK");
+        } else {
+            System.out.println("TEST 6 = FAIL");
+        }
+    }
+
+    // 1, 1 -> 1.0
+    public void test7() {
+        int number1 = 1;
+        int number2 = 1;
+
+        Calculator calculator = new Calculator();
+        double realResult = calculator.findAverage(number1, number2);
+
+        if (Math.abs(realResult - 1.0) < 0.00001) {
+            System.out.println("TEST 7 = OK");
+        } else {
+            System.out.println("TEST 7 = FAIL");
+        }
+    }
 
 }
