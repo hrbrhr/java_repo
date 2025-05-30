@@ -14,7 +14,7 @@ class AverageFinderTest {
         int num1 = 5;
         int num2 = 7;
 
-        int realResult = averageFinder.findAverage(num1, num2);
+        double realResult = averageFinder.findAverage(num1, num2);
         if (realResult == 6) {
             System.out.println("TEST 1 = OK");
         } else {
@@ -22,14 +22,14 @@ class AverageFinderTest {
         }
     }
 
-    // 5, 4 -> 4
+    // 5, 4 -> 4,5
     public void test2() {
         AverageFinder averageFinder = new AverageFinder();
         int num1 = 5;
         int num2 = 4;
 
-        int realResult = averageFinder.findAverage(num1, num2);
-        if (realResult == 4) {
+        double realResult = averageFinder.findAverage(num1, num2);
+        if (Math.abs(realResult - 4.5) < 0.00001) {
             System.out.println("TEST 2 = OK");
         } else {
             System.out.println("TEST 2 = FAIL");
