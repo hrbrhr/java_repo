@@ -1,4 +1,4 @@
-package org.javaguru.student_elena_tiutiunnikova.lesson_6.homework.level_1_intern;
+package org.javaguru.student_elena_tiutiunnikova.lesson_6.homework.level_1_intern.task_1;
 
 class TriangleSquare {
 
