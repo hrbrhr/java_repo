@@ -1,10 +1,10 @@
 package org.javaguru.student_anastassija.lesson_5.level_1;
 
-public class NumberToLineApplication {
+public class FizzBuzzApplication {
 
     public static void main(String[] args) {
 
-        NumberToLine numberToLine = new NumberToLine();
+        FizzBuzz numberToLine = new FizzBuzz();
 
         System.out.println("Number 9 = " + numberToLine.detect(9));
         System.out.println("Number 15 = " + numberToLine.detect(15));
