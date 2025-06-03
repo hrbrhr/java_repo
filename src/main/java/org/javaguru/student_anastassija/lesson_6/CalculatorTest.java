@@ -5,6 +5,7 @@ class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest test = new CalculatorTest();//zapusk testov
         test.test1();
+        test.test2();
         test.test3();
         test.test4();
         test.test5();
@@ -26,8 +27,8 @@ class CalculatorTest {
             System.out.println("TEST 1 = OK");
         } else {
             System.out.println("TEST 1 = FALSE");
-            }
         }
+    }
     // 3 -> false boolean
     public void test2() {
         int number = 3;//zadajom testovye dannye
@@ -156,11 +157,7 @@ class CalculatorTest {
             System.out.println("TEST 10 = FALSE");
         }
     }
-
-
-
-
-    }
+}
 
 
 
