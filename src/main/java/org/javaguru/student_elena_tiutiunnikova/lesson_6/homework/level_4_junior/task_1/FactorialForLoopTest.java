@@ -6,6 +6,7 @@ class FactorialForLoopTest {
         FactorialForLoopTest test = new FactorialForLoopTest();
         test.test1();
         test.test2();
+        test.test3();
     }
 
     // 2 -> 2
@@ -31,4 +32,17 @@ class FactorialForLoopTest {
             System.out.println("Test 2 = FAIL");
         }
     }
+
+    // 0 -> 1
+    public void test3 () {
+        FactorialForLoop factorialForLoop = new FactorialForLoop();
+        int realResult = factorialForLoop.factorial(0);
+
+        if ( realResult == 1 ) {
+            System.out.println("Test 3 = OK");
+        } else {
+            System.out.println("Test 3 = FAIL");
+        }
+    }
+
 }
