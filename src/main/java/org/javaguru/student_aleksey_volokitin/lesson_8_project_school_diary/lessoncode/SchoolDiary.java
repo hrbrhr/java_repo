@@ -4,17 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 class SchoolDiary {
-    // V1
-    // private List<Mark> marks;
-    // SchoolDiary() { this.marks = new ArrayList<>(); }
-    //
-    // V2
-    //private List<Mark> marks = new ArrayList<>();
-
-//    void addMark (String subject, int markValue) {
-//        Mark mark = new Mark(subject, markValue);
-//        marks.add(mark);
-//    }
 
     int findMaxMarkOfSubject(List<Mark> marks, String subject) {
         int maxMark = 0;
