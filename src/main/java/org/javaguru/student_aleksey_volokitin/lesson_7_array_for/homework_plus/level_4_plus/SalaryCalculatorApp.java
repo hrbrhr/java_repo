@@ -2,6 +2,7 @@ package org.javaguru.student_aleksey_volokitin.lesson_7_array_for.homework_plus.
 
 class SalaryCalculatorApp {
     public static void main(String[] args) {
+
         Person persons[] = {new Person("Ivanov", "Ivan", 1540.0),
                             new Person("Petrov", "Petr", 1630.52),
                             new Person("Sergeev", "Sergej", 1360.0),
