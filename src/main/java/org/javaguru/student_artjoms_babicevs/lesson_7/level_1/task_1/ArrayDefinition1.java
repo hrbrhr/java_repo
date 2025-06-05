@@ -1,4 +1,4 @@
-package org.javaguru.student_artjoms_babicevs.lesson_7.task_1;
+package org.javaguru.student_artjoms_babicevs.lesson_7.level_1.task_1;
 
  class ArrayDefinition1 {
 
