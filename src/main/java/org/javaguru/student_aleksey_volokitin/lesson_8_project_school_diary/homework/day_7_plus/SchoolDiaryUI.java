@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_8_project_school_diary.homework.day_6_plus;
+package org.javaguru.student_aleksey_volokitin.lesson_8_project_school_diary.homework.day_7_plus;
 
 
 import java.util.List;
@@ -11,12 +11,12 @@ class SchoolDiaryUI {
         Student student1 = new Student("Ivan", "Petrov", "4B");
         SchoolDiary schoolDiary = new SchoolDiary(student1);
 
-        List<Subject> subjects = schoolDiary.subjects;
+        List<Subject> subjects = schoolDiary.getSubjects();
 
         initialValues(subjects); // заполнение начальных значений
 
         while (true) {
-            printMainMenu();
+            printMainDiaryMenu();
             int numberOfMainMenu = requestIntData("Enter a number of menu: ");
             if ((numberOfMainMenu < 1) || (numberOfMainMenu > 11)) {
                 System.out.println("You enter incorrect number of menu!");
@@ -91,7 +91,7 @@ class SchoolDiaryUI {
         subjects.add(subject2);
     }
 
-    private static void printMainMenu() {
+    private static void printMainDiaryMenu() {
         System.out.println(" ");
         System.out.println("Main menu:");
         System.out.println("1. Add new subject");
@@ -198,7 +198,7 @@ class SchoolDiaryUI {
         int numberOfSubject = requestIntData("Enter number of subject: ");
         Subject subject = subjects.get(numberOfSubject - 1);
         System.out.println("Subject: " + subject.getName() +
-                ", max mark: " + subject.findMinMarkOfSubject());
+                ", min mark: " + subject.findMinMarkOfSubject());
     }
 
     private static void findAverageMarkOfSubject(List<Subject> subjects) {
@@ -210,7 +210,7 @@ class SchoolDiaryUI {
     }
 
     private static void findAverageMarkOfAllSubject(SchoolDiary schoolDiary) {
-        System.out.println("Average mark of all subject: " + schoolDiary.findAverageMarkOfAllSubjects());
+        System.out.println("Average mark of all subjects: " + schoolDiary.findAverageMarkOfAllSubjects());
     }
 
 
