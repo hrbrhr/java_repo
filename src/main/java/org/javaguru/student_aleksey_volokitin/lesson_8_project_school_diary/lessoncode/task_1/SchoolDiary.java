@@ -1,6 +1,5 @@
-package org.javaguru.student_aleksey_volokitin.lesson_8_project_school_diary.lessoncode;
+package org.javaguru.student_aleksey_volokitin.lesson_8_project_school_diary.lessoncode.task_1;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class SchoolDiary {
