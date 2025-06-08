@@ -19,6 +19,7 @@ class FraudRule1 implements FraudRule {
         Trader trader = transaction.getTrader();
         // задаем имена трейдеров и максимальные суммы транзакций, которые считаются мошенническими
         rule1DataList.add(new Rule1Data("Pokemon", 0));
+        rule1DataList.add(new Rule1Data("DJ", 0));
         rule1DataList.add(new Rule1Data("Aleks", 100000));
         rule1DataList.add(new Rule1Data("Dmitry", 1000));
         // Rule 1: если трейдер совпадает с трейдерами из ограничивающего списка Rule1Data

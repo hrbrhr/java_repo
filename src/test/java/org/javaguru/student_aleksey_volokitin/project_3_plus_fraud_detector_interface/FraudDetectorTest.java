@@ -46,10 +46,10 @@ class FraudDetectorTest {
     @Test
     void rule1test2() {
         FraudDetector fraudDetector = new FraudDetector();
-        Trader trader = new Trader("Aleks", "Chita", "Russia");
-        Transaction transaction = new Transaction(trader, 500);
+        Trader trader = new Trader("dJ", "Vladivostok", "Russia");
+        Transaction transaction = new Transaction(trader, 10);
 
-        boolean expectedResult = false;
+        boolean expectedResult = true;
         boolean actualResult = fraudDetector.isFraud(transaction);
         assertEquals(expectedResult, actualResult);
     }
@@ -58,7 +58,7 @@ class FraudDetectorTest {
     void rule1test3() {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Aleks", "Chita", "Russia");
-        Transaction transaction = new Transaction(trader, 100000);
+        Transaction transaction = new Transaction(trader, 500);
 
         boolean expectedResult = false;
         boolean actualResult = fraudDetector.isFraud(transaction);
@@ -69,6 +69,17 @@ class FraudDetectorTest {
     void rule1test4() {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Aleks", "Chita", "Russia");
+        Transaction transaction = new Transaction(trader, 100000);
+
+        boolean expectedResult = false;
+        boolean actualResult = fraudDetector.isFraud(transaction);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void rule1test5() {
+        FraudDetector fraudDetector = new FraudDetector();
+        Trader trader = new Trader("Aleks", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 100001);
 
         boolean expectedResult = true;
@@ -77,7 +88,7 @@ class FraudDetectorTest {
     }
 
     @Test
-    void rule1test5() {
+    void rule1test6() {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Dmitry", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 1000);
@@ -88,7 +99,7 @@ class FraudDetectorTest {
     }
 
     @Test
-    void rule1test6() {
+    void rule1test7() {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Dmitry", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 1001);
