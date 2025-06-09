@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.project_3_fraud_detector_interface;
+package org.javaguru.student_aleksey_volokitin.project_3_plus_fraud_detector_interface;
 
 class Rule3Data {
     private String city;
