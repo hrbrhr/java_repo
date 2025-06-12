@@ -32,6 +32,7 @@ class SalaryTest {
                 "Test Total Salary");
     }
 
+
     //    null -> 0.0
     public void testTotalZero () {
         Salary salary = new Salary();
