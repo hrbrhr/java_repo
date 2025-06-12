@@ -1,0 +1,10 @@
+package org.javaguru.student_evgenii_pashtaev.lesson_7.homework.level_1;
+
+class Task1 {
+
+    public static void main(String[] args) {
+        int[] numbers = new int[10];
+    }
+
+}
+

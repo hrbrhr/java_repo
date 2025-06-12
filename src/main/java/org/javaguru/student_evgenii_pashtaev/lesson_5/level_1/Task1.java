@@ -7,33 +7,33 @@ class Task1 {
 
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
-        System.out.println(devTree(number));
+        System.out.println(devThree(number));
         System.out.println(devFive(number));
-        System.out.println(devTreeFive(number));
+        System.out.println(devThreeFive(number));
         System.out.println(notDev(number));
 
 
 
     }
 
-    static String devTree(int number) {
+    static String devThree(int number) {
         if ((number % 3) == 0) {
             return "Fizz";
         }
-        return null;
+        return "";
     }
 
     static String devFive(int number){
         if (number%5 == 0){
             return "Buzz";
         }
-        return null;
+        return "";
     }
-    static String devTreeFive(int number){
+    static String devThreeFive(int number){
         if (number%3 == 0 && number%5 == 0){
             return "FizzBuzz";
         }
-        return null;
+        return "";
     }
 
     static String notDev(int number){
