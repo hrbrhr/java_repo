@@ -4,33 +4,33 @@ import java.util.Random;
 
 class ArrayExample {
 
+    public int[] createArray(int length) {
+        return new int[length];
+    }
+
+    public void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+    public int random(int max) {
+        Random random = new Random();
+        return random.nextInt(max);
+    }
+
     // method create array 10 length, fill random numbers 0 - 10
     public int random() {
         Random random = new Random();
         return random.nextInt(10);
     }
 
-    public int[] createArray(int length) {
-        return new int[length];
-    }
-
-    // int[] numbers = createArray(10);
-    // fillArrayWithRandomNumbers(numbers);
-
     public void fillArrayWithRandomNumbers(int[] numbers) {
-        Random random = new Random();
         for(int i = 0; i < numbers.length; i++) {
-            numbers[i] = random.nextInt(10);
+            numbers[i] = random(1000);
         }
     }
 
-    //javadoc
-
-    public void printArray(int[] numbers) {
-        for(int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
-        }
-    }
 
     // grades
     // marks

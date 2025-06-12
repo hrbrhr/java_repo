@@ -2,7 +2,40 @@ package org.javaguru.mentor.lesson_7_array_for.lessoncode;
 
 class PrintNumbers {
 
+    public static void main(String[] args) {
+        int[] numbers = new int[10];
+        numbers[4] = 34654;
+        numbers[7] = 4567;
+        numbers[9] = 888;
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        /*
+        for (int i = 0; i <= 100; i++) {
+            System.out.println(i);
+        }
+*/
+
+    }
+
     public void print() {
+        int[] numbers = new int[10];
+
+        // [0 .. (numbers.length - 1)]   +1
+        // 0 .. 9
+
+        // int i = 0  (0)
+
+        // print(numbers[i])
+
+        // i = i + 1  (1)
+        // print(numbers[i])
+
+        // i = i + 1  (2)
+        // print(numbers[i])
+
 
         // 1 - int i = 1
 
@@ -18,9 +51,18 @@ class PrintNumbers {
 
         // i++ => i = i + 1
 
-        for (int i = 1; i <= 10 ; i++) {
+        // i++  -> i = i + 1
+
+        for (int i = 0; i < 10; i++) {
             System.out.println(i);
         }
+
+
+/*
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+*/
 
     }
 
