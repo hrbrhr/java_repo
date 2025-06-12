@@ -20,21 +20,17 @@ class Salary {
 //
 //1. Найдите среднее значение (среднюю арифметическую) массива чисел.
 //
-//            2. Для каждого числа в массиве вычислите квадрат разности между числом
+//2. Для каждого числа в массиве вычислите квадрат разности между числом
 //    и средним значением.
 //
 //3. Найдите среднее значение полученных квадратов разностей.
 //
-//            4. Извлеките квадратный корень из среднего значения,
+//4. Извлеките квадратный корень из среднего значения,
 //    полученного в пункте 3.
 //
 //    PS: попробуйте узнать как стандартное отклонение (сигма)
 //    применяется в анализе данных и статистике.
 
-//    public double[] createSalary (double le)
-//
-//
-//
 
     public double totalSumSalary (double[] salary) {
         double totalSum = 0.0;
@@ -72,34 +68,20 @@ class Salary {
     }
 
     public double averageSalary (double[] salary) {
-        double averageSalary = 0.0;
-        for (int i = 0; i < salary.length; i++) {
-            averageSalary = totalSumSalary(salary)/salary.length;
-        } return averageSalary;
+        return totalSumSalary(salary)/salary.length;
     }
 
-//    public double otklonenieSquared (double [] salary) {
-//        double otklonenie = 0.0;
-//        for (int i = 0; i < salary.length; i++) {
-//            otklonenie = ((salary[i] - averageSalary(salary)) * (salary[i] - averageSalary(salary)));
-//        }
-//        return otklonenie;
-//    }
-//
-//    public double sigmaSalary (double[] salary) {
-//        if (salary.length < 2) {
-//            return 0.0;
-//        } else {
-//            double totalOtklonenie = 0.0;
-//            double averageOtklonenie = 0.0;
-//            double sigma = 0.0;
-//            for (int i = 0; i < salary.length; i++) {
-//                totalOtklonenie = totalOtklonenie + otklonenie[i];
-//                averageOtklonenie = totalOtklonenie / salary.length;
-//                sigma = Math.pow(averageOtklonenie, 2);
-//            }
-//            return sigma;
-//        }
-//    }
+    public double otklonenieSquared (double [] salary) {
+        double otklonenie = 0.0;
+        double average = averageSalary(salary);
+        for (int i = 0; i < salary.length; i++) {
+            otklonenie += Math.pow ((salary[i] - average), 2);
+        }
+        return otklonenie;
+    }
+
+    public double sigma (double[] salary) {
+         return Math.sqrt(otklonenieSquared(salary)/salary.length);
+    }
 
 }

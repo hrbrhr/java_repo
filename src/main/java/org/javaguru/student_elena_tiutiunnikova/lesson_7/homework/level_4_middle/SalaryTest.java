@@ -11,6 +11,7 @@ class SalaryTest {
         test.testMin();
         test.testMax();
         test.testMaxZero();
+        test.testSigma();
     }
 
     private void testForm (double realResult, double expectedResult, String testName) {
@@ -99,4 +100,13 @@ class SalaryTest {
                     0.0,
                     "Test Maximal Zero Salary");
         }
+
+    // sigma
+        public void testSigma () {
+            Salary salary = new Salary();
+            double[] salary1 = {1000.0, 4550.0, 25000.0, 50000.0, 6000.0, 12000.0, 35000.0};
+            double realResult = salary.sigma(salary1);
+            testForm(realResult, 16918.9635, "Test Sigma Of Salary");
+        }
+
 }

@@ -5,29 +5,29 @@ import java.util.Scanner;
 public class StockApp {
 
     public static void main(String[] args) {
-        String nameOfStock = getNameOfStockFromUser();
-        int stockPriceCount = getCountOfStockFromUser();
-        double[] prices = getPriceOfStockFromUser(stockPriceCount);
+        Scanner scanner = new Scanner(System.in);
+        String nameOfStock = getNameOfStockFromUser(scanner);
+        int stockPriceCount = getCountOfStockFromUser(scanner);
+        double[] prices = getPriceOfStockFromUser(scanner, stockPriceCount);
         double maxPrice = findMaxPriceOfStock(prices, nameOfStock);
         double minPrice = findMinPriceOfStock(prices, nameOfStock);
         double averagePrice = findAveragePriceOfStock(prices, nameOfStock);
         System.out.println("Программа завершена.");
+        scanner.close();
+
     }
 
-    private static String getNameOfStockFromUser () {
-        Scanner scanner = new Scanner(System.in);
+    private static String getNameOfStockFromUser (Scanner scanner) {
         System.out.print("Введите название акции: ");
         return scanner.nextLine();
     }
 
-    private static int getCountOfStockFromUser () {
-        Scanner scanner = new Scanner(System.in);
+    private static int getCountOfStockFromUser (Scanner scanner) {
         System.out.print("Введите количество котировок акции: ");
         return Integer.parseInt(scanner.nextLine());
     }
 
-    private static double[] getPriceOfStockFromUser (int stockPriceCount) {
-        Scanner scanner = new Scanner(System.in);
+    private static double[] getPriceOfStockFromUser (Scanner scanner, int stockPriceCount) {
         double[] prices = new double[stockPriceCount];
         for (int i = 0; i < stockPriceCount; i++) {
             System.out.print("Введите цену акции " + (i + 1) + ": ");
