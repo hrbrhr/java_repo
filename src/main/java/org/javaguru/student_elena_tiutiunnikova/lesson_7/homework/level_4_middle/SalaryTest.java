@@ -14,6 +14,7 @@ class SalaryTest {
         test.testSigma();
     }
 
+
     private void testForm (double realResult, double expectedResult, String testName) {
         if (Math.abs(realResult - expectedResult) < 0.001) {
             System.out.println(testName + " is OK");
