@@ -1,8 +1,8 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_8.lessoncode;
 
-class SchoolDiaryTest {
+class SchoolDairyTest {
     public static void main(String[] args) {
-        SchoolDiaryTest test = new SchoolDiaryTest();
+        SchoolDairyTest test = new SchoolDairyTest();
         test.test1();
         test.test2();
         test.test3();
@@ -26,7 +26,7 @@ class SchoolDiaryTest {
 
     // test case 1: subject = Math  mark = 5
     public void test1() {
-      SchoolDiary dairy = new SchoolDiary();
+      SchoolDairy dairy = new SchoolDairy();
       dairy.addMark("Math", 5);
       int result = dairy.findMaxMark("Math");
       if (result == 5) {
@@ -38,7 +38,7 @@ class SchoolDiaryTest {
 
 // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} , "Math" = 5
     public void test2() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         int result = dairy.findMaxMark("Math");
@@ -51,7 +51,7 @@ class SchoolDiaryTest {
 
 // test case 3: {subject = "Math", mark = 5}, {subject = "Math", mark = 5} , "Math" = 5
     public void test3() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 5);
         int result = dairy.findMaxMark("Math");
@@ -64,7 +64,7 @@ class SchoolDiaryTest {
 
 // test case 4: {} , "Math" = 0  (? null or 0 or error message)
     public void test4() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         int result = dairy.findMaxMark("Math");
         if (result == 0) {
             System.out.println("OK");
@@ -75,7 +75,7 @@ class SchoolDiaryTest {
 
 // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Math" = 5
     public void test5() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Eng", 10);
         int result = dairy.findMaxMark("Math");
@@ -88,7 +88,7 @@ class SchoolDiaryTest {
 
     // test case 1: subject = Math  mark = 5
     public void testMin1() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         int result = dairy.findMinMark("Math");
         if (result == 5) {
@@ -100,7 +100,7 @@ class SchoolDiaryTest {
 
     // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} , "Math" = 4
     public void testMin2() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         int result = dairy.findMinMark("Math");
@@ -113,7 +113,7 @@ class SchoolDiaryTest {
 
     // test case 3: {subject = "Math", mark = 5}, {subject = "Math", mark = 5} , "Math" = 5
     public void testMin3() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 5);
         int result = dairy.findMinMark("Math");
@@ -126,7 +126,7 @@ class SchoolDiaryTest {
 
     // test case 4: {} , "Math" = 0  (? null or 0 or error message)
     public void testMin4() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         int result = dairy.findMinMark("Math");
         if (result == 0) {
             System.out.println("OK");
@@ -137,7 +137,7 @@ class SchoolDiaryTest {
 
     // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Math" = 5
     public void testMin5() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Eng", 10);
         int result = dairy.findMinMark("Math");
@@ -150,7 +150,7 @@ class SchoolDiaryTest {
 
     // test case 1: subject = Math  mark = 5 -> 5
     public void testAverage1() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         double result = dairy.findAverageMark();
         if ((Math.abs(result - 5.0)) < 0.001) {
@@ -161,7 +161,7 @@ class SchoolDiaryTest {
     }
 // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} -> "Math" = 4.5
     public void testAverage2() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         double result = dairy.findAverageMark();
@@ -174,7 +174,7 @@ class SchoolDiaryTest {
 
 // test case 3: {} -> 0
     public void testAverage3() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
 
         double result = dairy.findAverageMark();
         if (result == 0) {
@@ -186,7 +186,7 @@ class SchoolDiaryTest {
 
 // test case 4: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10}, {subject = "Math", mark = 4} -> "rez" = 6.333
     public void testAverage4() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         dairy.addMark("Eng", 10);
@@ -200,7 +200,7 @@ class SchoolDiaryTest {
 
 // test case 1: subject = Math  mark = 5 -> 5.0
     public void testAverageForTheSubject1() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         double result = dairy.findAverageMarkForTheSubject("Math");
         if ((Math.abs(result - 5.0)) < 0.001) {
@@ -212,7 +212,7 @@ class SchoolDiaryTest {
 
 // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} -> "rez" = 4.5
     public void testAverageForTheSubject2() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         double result = dairy.findAverageMarkForTheSubject("Math");
@@ -225,7 +225,7 @@ class SchoolDiaryTest {
 
 // test case 3: {} -> 0
     public void testAverageForTheSubject3() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         double result = dairy.findAverageMarkForTheSubject("Math");
         if ((Math.abs(result - 0)) < 0.001) {
             System.out.println("testAverageForTheSubject3 OK");
@@ -236,7 +236,7 @@ class SchoolDiaryTest {
 
 // test case 4: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10}, {subject = "Math", mark = 4} -> "rez" = 4.5
     public void testAverageForTheSubject4() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         dairy.addMark("Eng", 10);
@@ -250,7 +250,7 @@ class SchoolDiaryTest {
 
     // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10}, {subject = "Math", mark = 4} Bio?-> "rez" = 0
     public void testAverageForTheSubject5() {
-        SchoolDiary dairy = new SchoolDiary();
+        SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         dairy.addMark("Math", 4);
         dairy.addMark("Eng", 10);

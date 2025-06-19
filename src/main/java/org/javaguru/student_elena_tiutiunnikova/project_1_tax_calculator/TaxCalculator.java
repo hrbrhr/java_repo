@@ -1,26 +1,34 @@
 package org.javaguru.student_elena_tiutiunnikova.project_1_tax_calculator;
 
  class TaxCalculator {
-     double calculateTax (double income) {
-        if ( income <= 10000 && income >= 0) {
-            return taxForIncomeLess10k(income);
-        } else if ( income <= 50000 && income > 10000) {
-            return taxForIncomeMore10kLess50k(income);
-        } else if ( income > 50000) {
-            return taxForIncomeMore50k(income);
-        } return 0.0;
+
+     public double calculate(double salary) {
+         double tax = 0;
+         if (salary < 0) {
+             tax = 0;
+         } else if (salary < 10000) {
+             tax = calculateTaxTo10k(salary);
+         } else if ((salary >= 10000) && (salary < 50000)) {
+             tax = calculateTaxFrom10kTo50k(salary);
+         } else if (salary >= 50000) {
+             tax = calculateTaxFrom50k(salary);
+         } else {
+             return tax;
+         }
+         return tax;
      }
 
-     private double taxForIncomeLess10k (double income) {
-        return income * 0.3 ;
+     public double calculateTaxTo10k (double salary) {
+         return (salary / 100.0) * 30;
      }
 
-     private double taxForIncomeMore10kLess50k (double income) {
-         return income * 0.4 ;
+     public double calculateTaxFrom10kTo50k (double salary) {
+         return 3000.0 + (((salary - 10000.0) / 100) * 40);
      }
 
-     private double taxForIncomeMore50k (double income) {
-         return income * 0.5 ;
+     public double calculateTaxFrom50k (double salary) {
+         return 19000.0 + (((salary - 50000.0) / 100) * 50);
      }
 
-}
+
+ }

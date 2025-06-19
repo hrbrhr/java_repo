@@ -3,11 +3,11 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_8.lessoncode;
 import java.util.ArrayList;
 import java.util.List;
 
-class SchoolDiary {
+class SchoolDairy {
 
     private List<Mark> marks;
 
-    public SchoolDiary() {
+    public SchoolDairy() {
         this.marks = new ArrayList<>();
     }
 
