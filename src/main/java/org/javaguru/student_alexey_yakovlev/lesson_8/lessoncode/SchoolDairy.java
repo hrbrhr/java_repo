@@ -38,7 +38,7 @@ class SchoolDairy {
 
 
     // test case1: {subject = "Biology", mark = 5}, "Biology" = 5
-    // test case 2: {subject = "Biology", mark = 5}, {subject = "Biology", mark = 4} , "Biology" = 5
+    // test case 2: {subject = "Biology", mark = 5}, {subject = "Biology", mark = 4} , "Biology" = 4
     // test case 3: {subject = "Biology", mark = 5}, {subject = "Biology", mark = 5} , "Biology" = 5
     // test case 4: {} , "Biology" = 0  (? null or 0 or error message)
     // test case 5: {subject = "Biology", mark = 5}, {subject = "Eng", mark = 10} , "Biology" = 5
@@ -53,4 +53,43 @@ class SchoolDairy {
         return minMark;
     }
 
+
+    // test case1: {subject = "Math", mark = 5}, "Math" = 5
+    // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} , "Math" = 4,5
+    // test case 3: {subject = "Math", mark = 5}, {subject = "Math", mark = 5} , "Math" = 5
+    // test case 4: {} , "Math" = 0  (? null or 0 or error message)
+    // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Math" = 5
+
+    double findAvgMark(String subject) {
+        double avgMark;
+        double sum = 0;
+        int count = 0;
+        for (Mark mark : marks) {
+            if (mark.getSubject().equals(subject)) {
+                sum += mark.getMark();
+                count++;
+            }
+        }
+        avgMark = sum / count;
+        return avgMark;
+    }
+
+
+    // test case1: {subject = "Math", mark = 5}, "Math" = 5
+    // test case 2: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} , "Math" = 4,5
+    // test case 3: {subject = "Math", mark = 5}, {subject = "Math", mark = 5} , "Math" = 5
+    // test case 4: {} , "Math" = 0  (? null or 0 or error message)
+    // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Math" = 7,5
+
+    double findTotalAvgMark() {
+        double totalAvgMark;
+        double sum = 0;
+        int count = 0;
+        for (Mark mark : marks) {
+            sum += mark.getMark();
+            count++;
+        }
+        totalAvgMark = sum / count;
+        return totalAvgMark;
+    }
 }
