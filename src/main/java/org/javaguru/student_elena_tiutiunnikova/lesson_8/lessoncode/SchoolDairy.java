@@ -23,7 +23,12 @@ class SchoolDairy {
 // test case 5: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Math" = 5
 
     int findMaxMark(String subject) {
+        if (marks.size() == 0) {
+            return 0;
+        };
+
         int maxMark = 0;
+
 //        for (int i = 0; i < marks.size(); i++) {
 //            Mark mark = marks.get(i);
 //        } ЭТО ТО ЖЕ САМОЕ, ЧТО СТРОКА НИЖЕ
@@ -45,15 +50,21 @@ class SchoolDairy {
     int findMinMark(String subject) {
         if (marks.size() == 0) {
             return 0;
-        } else {
-        int minMark = marks.get(0).getMark();
-            for (Mark mark : marks) {
-                if(mark.getSubject().equals(subject)
-                        && mark.getMark() < minMark) {
-                    minMark = mark.getMark();
-                }
-            } return minMark;
         }
+
+            boolean found = false;
+            int minMark = 0;
+
+            for (Mark mark : marks) {
+                if (mark.getSubject().equals(subject)) {
+                    if (!found) {
+                        minMark = mark.getMark();
+                        found = true;
+                    } else if (mark.getMark() < minMark) {
+                        minMark = mark.getMark();
+                    }
+                }
+            } return found ? minMark : 0;
     }
 
 // test case 1: subject = Math  mark = 5 -> 5
@@ -98,5 +109,4 @@ class SchoolDairy {
             return totalMarks / countOfMarks;
         }
     }
-
 }

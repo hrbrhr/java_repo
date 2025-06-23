@@ -8,11 +8,13 @@ class SchoolDairyTest {
         test.test3();
         test.test4();
         test.test5();
+        test.test6();
         test.testMin1();
         test.testMin2();
         test.testMin3();
         test.testMin4();
         test.testMin5();
+        test.testMin6();
         test.testAverage1();
         test.testAverage2();
         test.testAverage3();
@@ -86,15 +88,28 @@ class SchoolDairyTest {
         }
     }
 
+    // test case 6: {subject = "Math", mark = 5}, {subject = "Math", mark = 4} , "Math" = 5
+    public void test6() {
+        SchoolDairy dairy = new SchoolDairy();
+        dairy.addMark("Math", 5);
+        dairy.addMark("Math", 4);
+        int result = dairy.findMaxMark("Bio");
+        if (result == 0) {
+            System.out.println("TestMax6 OK");
+        } else {
+            System.out.println("TestMax6 FAIL");
+        }
+    }
+
     // test case 1: subject = Math  mark = 5
     public void testMin1() {
         SchoolDairy dairy = new SchoolDairy();
         dairy.addMark("Math", 5);
         int result = dairy.findMinMark("Math");
         if (result == 5) {
-            System.out.println("OK");
+            System.out.println("testMin1 OK");
         } else {
-            System.out.println("FAIL");
+            System.out.println("testMin1 FAIL");
         }
     }
 
@@ -105,9 +120,9 @@ class SchoolDairyTest {
         dairy.addMark("Math", 4);
         int result = dairy.findMinMark("Math");
         if (result == 4) {
-            System.out.println("OK");
+            System.out.println("testMin2 OK");
         } else {
-            System.out.println("FAIL");
+            System.out.println("testMin2 FAIL");
         }
     }
 
@@ -118,9 +133,9 @@ class SchoolDairyTest {
         dairy.addMark("Math", 5);
         int result = dairy.findMinMark("Math");
         if (result == 5) {
-            System.out.println("OK");
+            System.out.println("testMin3 OK");
         } else {
-            System.out.println("FAIL");
+            System.out.println("testMin3 FAIL");
         }
     }
 
@@ -129,9 +144,9 @@ class SchoolDairyTest {
         SchoolDairy dairy = new SchoolDairy();
         int result = dairy.findMinMark("Math");
         if (result == 0) {
-            System.out.println("OK");
+            System.out.println("testMin4 OK");
         } else {
-            System.out.println("FAIL");
+            System.out.println("testMin4 FAIL");
         }
     }
 
@@ -142,9 +157,22 @@ class SchoolDairyTest {
         dairy.addMark("Eng", 10);
         int result = dairy.findMinMark("Math");
         if (result == 5) {
-            System.out.println("OK");
+            System.out.println("testMin5 OK");
         } else {
-            System.out.println("FAIL");
+            System.out.println("testMin5 FAIL");
+        }
+    }
+
+    // test case 6: {subject = "Math", mark = 5}, {subject = "Eng", mark = 10} , "Bio" = 0
+    public void testMin6() {
+        SchoolDairy dairy = new SchoolDairy();
+        dairy.addMark("Math", 5);
+        dairy.addMark("Eng", 10);
+        int result = dairy.findMinMark("Bio");
+        if (result == 0) {
+            System.out.println("testMin6 OK");
+        } else {
+            System.out.println("testMin6 FAIL");
         }
     }
 
