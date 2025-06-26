@@ -30,13 +30,6 @@ class FraudDetectorTest {
     }
 
     @Test
-    public void shouldBeValidTransaction() {
-        Trader trader = new Trader("Ivan", "Rome", "Italy");
-        Transaction transaction = new Transaction(trader, 1000);
-        assertFalse(fraudDetector.isFraud(transaction));
-    }
-
-    @Test
     public void shouldBeFraudIfTraderFromSydney() {
         Trader trader = new Trader("Ivan", "Sydney", "Italy");
         Transaction transaction = new Transaction(trader, 1000);
@@ -55,6 +48,13 @@ class FraudDetectorTest {
         Trader trader = new Trader("Ivan", "Berlin", "Germany");
         Transaction transaction = new Transaction(trader, 1001);
         assertTrue(fraudDetector.isFraud(transaction));
+    }
+
+    @Test
+    public void shouldBeValidTransaction() {
+        Trader trader = new Trader("Ivan", "Rome", "Italy");
+        Transaction transaction = new Transaction(trader, 1000);
+        assertFalse(fraudDetector.isFraud(transaction));
     }
 
 
