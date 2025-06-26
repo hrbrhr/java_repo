@@ -7,4 +7,9 @@ class FraudRule2 implements FraudRule {
         Trader trader = transaction.getTrader();
         return transaction.getAmount() >= 1000000;
     }
+
+    public String getRuleName() {
+        return "FraudRule2";
+    }
+
 }
