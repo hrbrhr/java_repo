@@ -3,7 +3,7 @@ package org.javaguru.mentor.lesson_8_project_school_dairy.lessoncode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SchoolDairy {
+class SchoolDairy {
 
     private List<Mark> marks;
 

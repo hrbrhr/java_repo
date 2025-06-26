@@ -5,13 +5,13 @@ class TaxCalculatorApplication {
 
         TaxCalculator calculator = new TaxCalculator();
 
-        double tax1 = calculator.calculateTax(10000);
+        double tax1 = calculator.calculateTaxTo10k(10000);
         System.out.println("Tax: " + tax1);
 
-        double tax2 = calculator.calculateTax(50000);
+        double tax2 = calculator.calculateTaxFrom10kTo50k(50000);
         System.out.println("Tax: " + tax2);
 
-        double tax3 = calculator.calculateTax(60000);
+        double tax3 = calculator.calculateTaxFrom50k(60000);
         System.out.println("Tax: " + tax3);
     }
 
