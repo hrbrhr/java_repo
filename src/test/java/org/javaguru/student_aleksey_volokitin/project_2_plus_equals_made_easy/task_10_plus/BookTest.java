@@ -1,0 +1,112 @@
+package org.javaguru.student_aleksey_volokitin.project_2_plus_equals_made_easy.task_10_plus;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class BookTest {
+
+    @Test
+    public void task2_test1_shouldBeEqualsToItself() {
+        Book book = new Book("A", "B", 100);
+        assertTrue(book.equals(book));
+    }
+
+    @Test
+    public void task2_test2_shouldNotBeEqualsToNull() {
+        Book book = new Book("A", "B", 100);
+        assertFalse(book.equals(null));
+    }
+
+    @Test
+    public void task2_test3_shouldNotBeEquals() {
+        Book book1 = new Book("A", "B", 100);
+        Book book2 = new Book("A", "B", 100);
+        assertTrue(book1.equals(book2));
+    }
+
+    @Test
+    public void task4_test4_compareToInstanceOfDifferentClass() {
+        Book book = new Book("A", "B", 100);
+        Car car = new Car("Porsche", "911", 500);
+        assertFalse(book.equals(car));
+    }
+
+    @Test
+    public void task6_test5_instanceofTrue() {
+        Book book = new Book("A", "B", 100);
+        assertTrue(book instanceof Book);
+    }
+
+    @Test
+    public void task6_test6_instanceofTrue() {
+        Book book = new Book("A", "B", 100);
+        assertTrue((Object)book instanceof Book);
+    }
+
+    @Test
+    public void task6_test7_instanceofFalse() {
+        Book book = new Book("A", "B", 100);
+        assertFalse((Object)book instanceof Car);
+    }
+
+    @Test
+    public void task7_test8_instanceofPlusConvert() {
+        Object object = new Book("A", "B", 100);
+        if (object instanceof Book book) {
+            assertEquals(book.getAuthor(), "A");
+            assertEquals(book.getTitle(), "B");
+            assertEquals(book.getPageCount(), 100);
+        }
+    }
+
+    @Test
+    public void task9_test9_equalsTrue() {
+        Book book1 = new Book("A", "B", 100);
+        Book book2 = new Book("A", "B", 100);
+        assertTrue(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test10_equalsFalseAuthorsAreDifferent() {
+        Book book1 = new Book("A", "B", 100);
+        Book book2 = new Book("B", "B", 100);
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test11_equalsFalseTitlesAreDifferent() {
+        Book book1 = new Book("A", "A", 100);
+        Book book2 = new Book("A", "B", 100);
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test12_equalsFalseAuthorsAreDifferentNull() {
+        Book book1 = new Book("A", "A", 100);
+        Book book2 = new Book(null, "B", 100);
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test13_equalsFalseTitlesAreDifferentNull() {
+        Book book1 = new Book("A", "A", 100);
+        Book book2 = new Book("A", null, 100);
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test14_equalsFalse() {
+        Book book1 = new Book("A", "A", 100);
+        Book book2 = new Book("Y", "Z", 100);
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void task9_test15_equalsFalsePageCountAreDifferent() {
+        Book book1 = new Book("A", "A", 100);
+        Book book2 = new Book("A", "A", 200);
+        assertFalse(book1.equals(book2));
+    }
+
+}
