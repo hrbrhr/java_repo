@@ -1,38 +1,32 @@
 package org.javaguru.student_alexey_yakovlev.project_3_fraud_detector;
 
+import java.util.List;
+
 class FraudDetector {
 
-    boolean isFraud(Transaction transaction) {
-        return isFraudByRule1(transaction)
-                || isFraudByRule2(transaction)
-                || isFraudByRule3(transaction)
-                || isFraudByRule4(transaction)
-                || isFraudByRule5(transaction);
+    private List<FraudRule> fraudRules = List.of(
+            new FraudRule1(),
+            new FraudRule2(),
+            new FraudRule3(),
+            new FraudRule4(),
+            new FraudRule5()
+    );
+
+    FraudDetectionResult isFraud(Transaction transaction) {
+        return fraudRules.stream()
+                .filter(fraudRule -> fraudRule.isFraud(transaction))
+                .findFirst()
+                .map(this::buildFraudResult)
+                .orElse(buildNotFraudResult());
     }
 
-    private boolean isFraudByRule1(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getFullName().equals("Pokemon");
+    private FraudDetectionResult buildNotFraudResult() {
+        return new FraudDetectionResult(false, null);
     }
 
-    private boolean isFraudByRule2(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return  transaction.getAmount() > 1000000;
+    private FraudDetectionResult buildFraudResult(FraudRule fraudRule) {
+        return new FraudDetectionResult(true, fraudRule.getRuleName());
     }
 
-    private boolean isFraudByRule3(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCity().equals("Sydney");
-    }
-
-    private boolean isFraudByRule4(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCountry().equals("Jamaica");
-    }
-
-    private boolean isFraudByRule5(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        return trader.getCountry().equals("Germany") && transaction.getAmount() > 1000;
-    }
 
 }

@@ -8,4 +8,9 @@ class FraudRule1 implements FraudRule {
         return trader.getFullName().equals("Pokemon");
     }
 
+    @Override
+    public String getRuleName() {
+        return "FraudRule1";
+    }
+
 }

@@ -8,4 +8,9 @@ class FraudRule2 implements FraudRule {
         return transaction.getAmount() > 1000000;
     }
 
+    @Override
+    public String getRuleName() {
+        return "FraudRule2";
+    }
+
 }
