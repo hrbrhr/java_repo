@@ -9,6 +9,7 @@ class FraudDetectorTest {
     // Rule 1:
     // Транзакции имен трейдеров из списка и суммой выше порогового значения должны быть отклонены:
     //    - Имя трейдера "Pokemon", пороговая сумма 0.
+    //    - Имя трейдера "GJ",      пороговая сумма 0.
     //    - Имя трейдера "Aleks",   пороговая сумма 100000.
     //    - Имя трейдера "Dmitry",  пороговая сумма 1000.
     //
@@ -37,9 +38,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Pokemon", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 1000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -48,9 +50,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("dJ", "Vladivostok", "Russia");
         Transaction transaction = new Transaction(trader, 10);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -59,9 +62,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Aleks", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 500);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -70,9 +74,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Aleks", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 100000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -81,9 +86,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Aleks", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 100001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -92,9 +98,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Dmitry", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 1000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -103,9 +110,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Dmitry", "Chita", "Russia");
         Transaction transaction = new Transaction(trader, 1001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -114,9 +122,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Sergey", "Moscow", "Russia");
         Transaction transaction = new Transaction(trader, 1000000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -125,9 +134,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Sergey", "Moscow", "Russia");
         Transaction transaction = new Transaction(trader, 1000001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -136,9 +146,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Kostya", "Sidney", "Australia");
         Transaction transaction = new Transaction(trader, 1);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -147,9 +158,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Mark", "London", "UK");
         Transaction transaction = new Transaction(trader, 1000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -158,9 +170,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Mark", "London", "UK");
         Transaction transaction = new Transaction(trader, 1001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -169,9 +182,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "cAlifornia", "USA");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -180,9 +194,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "cAlifornia", "USA");
         Transaction transaction = new Transaction(trader, 10001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -191,9 +206,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "Jakarta", "Jamaica");
         Transaction transaction = new Transaction(trader, 10);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -202,9 +218,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "Jakarta", "Jamaica");
         Transaction transaction = new Transaction(trader, 101);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -213,9 +230,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "New York", "USA");
         Transaction transaction = new Transaction(trader, 50000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -224,9 +242,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("John", "New York", "USA");
         Transaction transaction = new Transaction(trader, 50001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -235,9 +254,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Mike", "Birmingham", "UK");
         Transaction transaction = new Transaction(trader, 100000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -246,9 +266,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("Mike", "Birmingham", "UK");
         Transaction transaction = new Transaction(trader, 100001);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -257,9 +278,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("lolyori", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -268,9 +290,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("lol-yori", "Tokyo", "Japan");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -279,9 +302,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("lol-ori", "Paris", "France");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -290,9 +314,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("iNt-ori", "Paris", "France");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -301,9 +326,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("COS-ori", "Birmingham", "France");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = false;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 
@@ -312,9 +338,10 @@ class FraudDetectorTest {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader("COS-ori", "Birmingham", "UK");
         Transaction transaction = new Transaction(trader, 10000);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
         boolean expectedResult = true;
-        boolean actualResult = fraudDetector.isFraud(transaction);
+        boolean actualResult = fraudDetectionResult.isFraud();
         assertEquals(expectedResult, actualResult);
     }
 }

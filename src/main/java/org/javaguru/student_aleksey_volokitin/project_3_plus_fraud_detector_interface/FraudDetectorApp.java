@@ -18,8 +18,10 @@ class FraudDetectorApp {
         FraudDetector fraudDetector = new FraudDetector();
         Trader trader = new Trader(nameOfTrader, cityOfTrader, countryOfTrader);
         Transaction transaction = new Transaction(trader, amountOfTransaction);
-        boolean result = fraudDetector.isFraud(transaction);
+        //boolean result = fraudDetector.isFraud(transaction);
+        FraudDetectionResult fraudDetectionResult = fraudDetector.isFraud(transaction);
 
-        System.out.println("Transaction is fraud: " + result);
+        System.out.println("Transaction is fraud: " + fraudDetectionResult.isFraud() +
+                           ", fraud rule: " + fraudDetectionResult.ruleName());
     }
 }

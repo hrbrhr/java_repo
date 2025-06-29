@@ -7,4 +7,9 @@ class FraudRule4 implements FraudRule {
         Trader trader = transaction.getTrader();
         return trader.getCountry().equals("Jamaica");
     }
+
+    public String getRuleName() {
+        return "FraudRule4";
+    }
+
 }

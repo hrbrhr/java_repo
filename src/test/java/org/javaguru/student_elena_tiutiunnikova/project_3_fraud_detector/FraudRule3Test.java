@@ -10,7 +10,7 @@ class FraudRule3Test {
 
     @Test
     public void testCitySydneyShouldBeFraud () {
-        Trader trader = new Trader("Mouse", "Minsk", "Belarus");
+        Trader trader = new Trader("Mouse", "Sydney", "Belarus");
         Transaction transaction = new Transaction(trader, 1000);
         assertTrue(fraudRule3.isFraud(transaction));
     }

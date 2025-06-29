@@ -6,5 +6,9 @@ class FraudRule2 implements FraudRule {
 
         // Rule 2: все транзакции на сумму больше 1000000 должны быть отклонены
         return transaction.getAmount() > 1000000;
-        }
+    }
+
+    public String ruleName() {
+        return "Fraud rule 2";
+    }
 }

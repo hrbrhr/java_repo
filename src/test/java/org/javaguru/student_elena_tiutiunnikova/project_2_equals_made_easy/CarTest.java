@@ -21,7 +21,7 @@ class CarTest {
     public void shouldNotBeEquals () {
         Car car1 = new Car("A", "B");
         Car car2 = new Car("A", "B");
-        assertFalse(car1.equals(car2));
+        assertTrue(car1.equals(car2));
     }
 
     @Test

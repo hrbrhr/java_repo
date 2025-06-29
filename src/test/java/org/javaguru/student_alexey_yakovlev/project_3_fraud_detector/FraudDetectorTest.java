@@ -12,49 +12,63 @@ class FraudDetectorTest {
     public void shouldBeFraudTransactionFromTraderPokemon() {
         Trader trader = new Trader("Pokemon", "Rome", "Italy");
         Transaction transaction = new Transaction(trader, 1000);
-        assertTrue(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "FraudRule1");
     }
 
     @Test
     public void shouldNotBeFraudTransactionFromOtherTraderThenPokemon() {
-        Trader trader = new Trader("Alex", "Rome", "Italy");
+        Trader trader = new Trader("Ivan", "Rome", "Italy");
         Transaction transaction = new Transaction(trader, 1000);
-        assertFalse(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertFalse(result.isFraud());
+        assertNull(result.getRuleName());
     }
 
     @Test
     public void shouldBeFraudTransactionWithAmountMoreThen1000000() {
         Trader trader = new Trader("Ivan", "Rome", "Italy");
         Transaction transaction = new Transaction(trader, 1000001);
-        assertTrue(fraudDetector.isFraud(transaction));
-    }
-
-    @Test
-    public void shouldBeValidTransaction() {
-        Trader trader = new Trader("Ivan", "Rome", "Italy");
-        Transaction transaction = new Transaction(trader, 1000);
-        assertFalse(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "FraudRule2");
     }
 
     @Test
     public void shouldBeFraudIfTraderFromSydney() {
         Trader trader = new Trader("Ivan", "Sydney", "Italy");
         Transaction transaction = new Transaction(trader, 1000);
-        assertTrue(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "FraudRule3");
     }
 
     @Test
     public void shouldBeFraudIfTraderFromJamaica() {
         Trader trader = new Trader("Ivan", "Kingston", "Jamaica");
         Transaction transaction = new Transaction(trader, 1000);
-        assertTrue(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "FraudRule4");
     }
 
     @Test
     public void shouldBeFraudIfTraderFromGermanyAndAmountMoreThan1000() {
         Trader trader = new Trader("Ivan", "Berlin", "Germany");
         Transaction transaction = new Transaction(trader, 1001);
-        assertTrue(fraudDetector.isFraud(transaction));
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertTrue(result.isFraud());
+        assertEquals(result.getRuleName(), "FraudRule5");
+    }
+
+    @Test
+    public void shouldBeValidTransaction() {
+        Trader trader = new Trader("Ivan", "Rome", "Italy");
+        Transaction transaction = new Transaction(trader, 1000);
+        FraudDetectionResult result = fraudDetector.isFraud(transaction);
+        assertFalse(result.isFraud());
+        assertNull(result.getRuleName());
     }
 
 

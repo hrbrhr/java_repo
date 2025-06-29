@@ -1,30 +1,32 @@
 package org.javaguru.student_alexey_yakovlev.project_3_fraud_detector;
 
+import java.util.List;
+
 class FraudDetector {
 
-    boolean isFraud(Transaction transaction) {
-        Trader trader = transaction.getTrader();
-        if (trader.getFullName().equals("Pokemon")) {
-            return true;
-        }
+    private List<FraudRule> fraudRules = List.of(
+            new FraudRule1(),
+            new FraudRule2(),
+            new FraudRule3(),
+            new FraudRule4(),
+            new FraudRule5()
+    );
 
-        if (transaction.getAmount() > 1000000) {
-            return true;
-        }
-
-        if (trader.getCity().equals("Sydney")) {
-            return true;
-        }
-
-        if (trader.getCountry().equals("Jamaica")) {
-            return true;
-        }
-
-        if (trader.getCountry().equals("Germany") && transaction.getAmount() > 1000) {
-            return true;
-        }
-
-        return false;
+    FraudDetectionResult isFraud(Transaction transaction) {
+        return fraudRules.stream()
+                .filter(fraudRule -> fraudRule.isFraud(transaction))
+                .findFirst()
+                .map(this::buildFraudResult)
+                .orElse(buildNotFraudResult());
     }
+
+    private FraudDetectionResult buildNotFraudResult() {
+        return new FraudDetectionResult(false, null);
+    }
+
+    private FraudDetectionResult buildFraudResult(FraudRule fraudRule) {
+        return new FraudDetectionResult(true, fraudRule.getRuleName());
+    }
+
 
 }
