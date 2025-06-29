@@ -1,6 +1,6 @@
 package org.javaguru.student_evgenii_pashtaev.lesson_7.homework.level_6;
 
-public class StockApp {
+class StockApp {
 
     public static void main(String[] args){
         Portfolio port1 = new Portfolio();
