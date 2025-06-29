@@ -20,4 +20,11 @@ class Square extends Shape {
     @Override
     String getRadiusSide() { return side + ""; }
 
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if (!(o instanceof Square square)) return false;
+        return this.getTitle().equals(((Square) o).getTitle()) && Double.compare(side, square.side) == 0;
+    }
+
 }

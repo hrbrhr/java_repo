@@ -1,5 +1,7 @@
 package org.javaguru.student_aleksey_volokitin.project_4_geometry_shape;
 
+import java.util.Objects;
+
 abstract class Shape {
 
     private String title;
@@ -11,4 +13,6 @@ abstract class Shape {
     abstract double calculateArea();
     abstract double calculatePerimeter();
     abstract String getRadiusSide();
+    //abstract boolean equals();
+
 }

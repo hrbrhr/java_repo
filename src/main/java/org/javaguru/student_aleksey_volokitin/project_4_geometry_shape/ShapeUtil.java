@@ -1,7 +1,9 @@
 package org.javaguru.student_aleksey_volokitin.project_4_geometry_shape;
 
 
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.List;
 
 class ShapeUtil {
     Circle createRandomCircle() {
@@ -43,6 +45,15 @@ class ShapeUtil {
         return areaOfShapes;
     }
 
+    List<Shape> findEquals(List<Shape> allShapes, Shape shapeToCompare) {
+        List<Shape> equalShapes = new ArrayList<>();
+        for (Shape shape: allShapes) {
+            if(shape.equals(shapeToCompare)) {
+                equalShapes.add(shapeToCompare);
+            }
+        }
+        return equalShapes;
+    }
     double calculatePerimeter(Shape[] shapes) {
         double perimeterOfShapes = 0.0d;
         for (Shape shape : shapes) {
@@ -58,4 +69,9 @@ class ShapeUtil {
     double calculatePerimeter(Shape shape) {
         return shape.calculatePerimeter();
     }
+
+    Shape shape1 = new Circle("11", 4);
+    Shape shape2 = new Circle("11", 5);
+    boolean ww = shape1.equals(shape2);
+
 }
