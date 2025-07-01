@@ -1,0 +1,9 @@
+package org.javaguru.student_aleksey_volokitin.project_5_apple_warehouse.v1;
+
+class GreenAppleSearchCriteria implements AppleSearchCriteria {
+
+    @Override
+    public boolean test(Apple apple) {
+        return apple.getColor().equals("green");
+    }
+}
