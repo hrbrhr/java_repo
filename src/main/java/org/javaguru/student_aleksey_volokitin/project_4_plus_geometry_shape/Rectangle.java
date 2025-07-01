@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.project_4_geometry_shape;
+package org.javaguru.student_aleksey_volokitin.project_4_plus_geometry_shape;
 
 class Rectangle extends Shape {
 

@@ -1,6 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.project_4_geometry_shape;
-
-import java.util.Objects;
+package org.javaguru.student_aleksey_volokitin.project_4_plus_geometry_shape;
 
 abstract class Shape {
 
