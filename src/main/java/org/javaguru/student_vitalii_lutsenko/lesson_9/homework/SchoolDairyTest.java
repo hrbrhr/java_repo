@@ -1,6 +1,6 @@
-package org.javaguru.student_vitalii_lutsenko.lesson_8.classwork;
+package org.javaguru.student_vitalii_lutsenko.lesson_9.homework;
 
- class SchoolDairyTest {
+class SchoolDairyTest {
 
 
      public static void main(String[] args) {
@@ -16,8 +16,6 @@ package org.javaguru.student_vitalii_lutsenko.lesson_8.classwork;
          test.test8();
          test.test9();
          test.test10();
-         test.test11();
-         test.test12();
 
      }
 
@@ -156,35 +154,6 @@ package org.javaguru.student_vitalii_lutsenko.lesson_8.classwork;
              System.out.println("Test 10 =  OK ");
          } else {
              System.out.println("Test 10 = FAILED ");
-         }
-     }
-     //test case 11 : {subject = "Eng" , mark = 17} , {subject = "Math", mark = 100}, "Math" = 10
-
-     public void test11() {
-
-         SchoolDairy dairy = new SchoolDairy();
-         dairy.addMark("Math", 17);
-         dairy.addMark("Math", 9);
-         dairy.addMark("Math", 100);
-         int result = dairy.findMinMark("Math");
-         if (result ==9) {
-             System.out.println("Test 11 =  OK " + result);
-         } else {
-             System.out.println("Test 11 = FAILED " + result);
-         }
-     }
-
-     public void test12() {
-
-         SchoolDairy dairy = new SchoolDairy();
-         dairy.addMark("Math", 17);
-         dairy.addMark("Math", 100);
-         dairy.addMark("Math", 5);
-         int result = dairy.findAverageBySubject("Math");
-         if (result ==5) {
-             System.out.println("Test 11 =  OK " + result);
-         } else {
-             System.out.println("Test 11 = FAILED " + result);
          }
      }
 
