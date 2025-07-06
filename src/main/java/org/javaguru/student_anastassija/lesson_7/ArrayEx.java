@@ -2,26 +2,28 @@ package org.javaguru.student_anastassija.lesson_7;
 import java.util.Random;
 
 class ArrayEx {
-
+//sozdajom metod, kotoryj budet sozdvat massiv ukazannoj dliny
     public int[] createArray(int length){
+
         return new int[length];
     }
-
+    //raspechataet massiv .
+    //esli metod nichego ne vozzrashaet, to ispolzuem VOID
     public void printArray(int[] array){
         for (int i = 0; i < array.length; i++){
             System.out.println(array[i]);
         }
     }
-//zapolnit jaceiki vsego massiva randomnymi cislami
+//metod, kot.zapolnit jaceiki vsego massiva randomnymi cislami
     public void fillArrayWithRandomNumbers(int[] numbers){
             for (int i = 0; i < numbers.length; i++){
                 numbers[i] = random(10);
         }
     }
-//primer metoda random
+//primer metoda random, on vhodit v JDK
     public int random(int max){
         Random random = new Random();//sgenerit randomnye cisla
-        return  random.nextInt(max);
+        return random.nextInt(max);
     }
 
 }
