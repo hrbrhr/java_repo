@@ -5,8 +5,8 @@ class Salary_AnalyserTest {
     public static void main(String[] args) {
         Salary_AnalyserTest test = new Salary_AnalyserTest();//zapusk testov
 
-        test.test1();//общие расходы на зарплаты
-        test.test2();//минимальную зарплату
+        test.test1();//общие расходы на зарплаты f
+        test.test2();//минимальную зарплатуff
         test.test3();//максимальную зарплату
         test.test4();//среднюю зарплату
         test.test5();//общие расходы 0

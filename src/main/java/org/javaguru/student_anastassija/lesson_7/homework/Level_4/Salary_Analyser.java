@@ -1,6 +1,6 @@
 package org.javaguru.student_anastassija.lesson_7.homework.Level_4;
 
-class Salary_Analyser {
+class Salary_Analyser {//ff
     //общие расходы на зарплаты
     public double calculateTotalSalarySum(double[] salaries){
         double totalSalarySum = 0.0;
