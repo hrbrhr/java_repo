@@ -11,8 +11,12 @@ import java.util.List;
          this.marks = new ArrayList<>();
      }
     void addMark(String subject, int markValue) {
-         Mark mark = new Mark(subject,markValue);
-         marks.add(mark);
+         if (markValue >=1 && markValue <=10) {
+             Mark mark = new Mark(subject, markValue);
+             marks.add(mark);
+         } else {
+             System.out.println("Error:Mark must be between 1 and 10. Entered:" + markValue);
+         }
 
     }
 
@@ -42,6 +46,7 @@ import java.util.List;
      //test case 3 : {subject = "Math" , mark = 8} , {subject = "Math", mark = 3}, "Math" = 3
      //test case 4 : {} , "Math" = 0
      //test case 5 : {subject = "Eng" , mark = 7} , {subject = "Math", mark = 10}, "Math" = 10
+     //test case 6 : {subject = "Eng" , mark = 17} , {subject = "Math", mark = 100}, "Math" = 10
 
      public int findMinMark(String subject) {
          int minMark = 11;
@@ -55,13 +60,9 @@ import java.util.List;
          }
          return minMark;
      }
-
-
-
 /*
      public int findMinMark(String subject) {
          int minGrade = 10;
-
          for (int i = 0; i < marks.size(); i++) {
              Mark mark = marks.get(i);
              if (mark.getSubject().equals(subject)) {
@@ -74,8 +75,53 @@ import java.util.List;
              minGrade = 0;
          }
          return minGrade;
-
      }
 */
+//test case 1 : {subject = "Math" , mark = 3} , "Math" = 3
+//test case 2 : {subject = "Math" , mark = 5} , {subject = "Math", mark = 10}, "Math" = 7
+//test case 3 : {subject = "Math" , mark = 8} , {subject = "Math", mark = 3}, "Math" = 3
+//test case 4 : {} , "Math" = 0
+//test case 5 : {subject = "Eng" , mark = 7} , {subject = "Math", mark = 10}, "Math" = 10
+//test case 6 : {subject = "Eng" , mark = 17} , {subject = "Math", mark = 100}, "Math" = 10
+
+     public int findAverageBySubject (String subject){
+         int sum = 0;
+         int count = 0;
+
+         for (Mark mark : marks){
+             if (mark.getSubject().equals(subject)) {
+                 sum += mark.getMark();
+                 count++;
+             }
+         }
+         if (count == 0) {
+             return 0;
+         }
+         return sum / count;
+     }
+
+     public int findAverageForAllSubjects() {
+         int sum = 0;
+         int count = 0;
+
+         for (Mark mark : marks) {
+             sum += mark.getMark();
+             count++;
+         }
+
+         if (count == 0) {
+             return 0;
+         }
+
+         return sum / count;
+     }
+
+
+
+
+
+
+
+
 
 }

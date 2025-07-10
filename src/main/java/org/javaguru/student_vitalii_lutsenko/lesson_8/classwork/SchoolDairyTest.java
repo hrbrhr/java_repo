@@ -16,6 +16,9 @@ package org.javaguru.student_vitalii_lutsenko.lesson_8.classwork;
          test.test8();
          test.test9();
          test.test10();
+         test.test11();
+         test.test12();
+         test.test13();
 
      }
 
@@ -154,6 +157,51 @@ package org.javaguru.student_vitalii_lutsenko.lesson_8.classwork;
              System.out.println("Test 10 =  OK ");
          } else {
              System.out.println("Test 10 = FAILED ");
+         }
+     }
+     //test case 11 : {subject = "Eng" , mark = 17} , {subject = "Math", mark = 100}, "Math" = 10
+
+     public void test11() {
+
+         SchoolDairy dairy = new SchoolDairy();
+         dairy.addMark("Math", 17);
+         dairy.addMark("Math", 9);
+         dairy.addMark("Math", 100);
+         dairy.addMark("Eng", 7);
+         int result = dairy.findMinMark("Math");
+         if (result ==9) {
+             System.out.println("Test 11 =  OK " + result);
+         } else {
+             System.out.println("Test 11 = FAILED " + result);
+         }
+     }
+
+     public void test12() {
+
+         SchoolDairy dairy = new SchoolDairy();
+         dairy.addMark("Math", 17);
+         dairy.addMark("Math", 100);
+         dairy.addMark("Math", 5);
+         dairy.addMark("Eng", 7);
+         int result = dairy.findAverageBySubject("Math");
+         if (result ==5) {
+             System.out.println("Test 12 =  OK " + result);
+         } else {
+             System.out.println("Test 12 = FAILED " + result);
+         }
+     }
+     public void test13() {
+
+         SchoolDairy dairy = new SchoolDairy();
+         dairy.addMark("Math", 17);
+         dairy.addMark("Math", 100);
+         dairy.addMark("Math", 5);
+         dairy.addMark("Eng", 7);
+         int result = dairy.findAverageForAllSubjects();
+         if (result ==6) {
+             System.out.println("Test 13 =  OK " + result);
+         } else {
+             System.out.println("Test 13 = FAILED " + result);
          }
      }
 
