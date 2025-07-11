@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_2;
 
-public class CarApp {
+class CarApp {
     public static void main(String[] args) {
         Car bmw = new Car("BMW", "white", 6_700_000);
         Car toyota = new Car("Toyota", "perl", 4_800_000);

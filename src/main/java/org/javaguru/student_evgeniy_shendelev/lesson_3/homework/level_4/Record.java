@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_4;
 
-public class Record {
+class Record {
     private String patientName;
     private String patientSurname;
     private String diagnosis;

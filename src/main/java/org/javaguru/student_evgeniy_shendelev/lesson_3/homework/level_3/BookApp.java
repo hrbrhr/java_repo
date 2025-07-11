@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_3;
 
-public class BookApp {
+class BookApp {
     public static void main(String[] args) {
         Book bookOne = new Book("Great Book", "Great Author", 1993);
         Book bookTwo = new Book("Greater Book", "Greater Author", 1995);

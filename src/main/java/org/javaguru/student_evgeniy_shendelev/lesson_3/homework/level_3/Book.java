@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_3;
 
-public class Book {
+class Book {
     private String name;
     private String author;
     private int yearOfIssue;

@@ -2,7 +2,7 @@ package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_4;
 
 import java.time.LocalDate;
 
-public class DoctorTimetableApp {
+class DoctorTimetableApp {
     public static void main(String[] args) {
         Record vasya = new Record("Vasya", "Pupkin", "Not defined", 3500);
         Record ivan = new Record("Ivan", "Ivanov", "Hernia", 4500); // это если что грыжа)

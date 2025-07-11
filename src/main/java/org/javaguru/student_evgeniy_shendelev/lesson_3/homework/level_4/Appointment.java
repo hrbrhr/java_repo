@@ -2,7 +2,7 @@ package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_4;
 
 import java.time.LocalDate;
 
-public class Appointment {
+class Appointment {
     private String doctorName;
     private String doctorSurname;
     private String specialty;
