@@ -1,4 +1,4 @@
-package org.javaguru.student_evgeniy_shendelev.lesson_4.level_4;
+package org.javaguru.student_evgeniy_shendelev.lesson_4.homework.level_4;
 
 class Stock {
     private String name;

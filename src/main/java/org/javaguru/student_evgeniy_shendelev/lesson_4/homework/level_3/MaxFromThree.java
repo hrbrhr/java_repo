@@ -1,4 +1,4 @@
-package org.javaguru.student_evgeniy_shendelev.lesson_4.level_3;
+package org.javaguru.student_evgeniy_shendelev.lesson_4.homework.level_3;
 
 import java.util.Scanner;
 
