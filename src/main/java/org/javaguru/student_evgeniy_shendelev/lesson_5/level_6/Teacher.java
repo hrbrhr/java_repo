@@ -32,8 +32,5 @@ class Teacher {
         System.out.println("Avg for Masha: " + classRoomRates.avgRate(classRoomRates.getReportCardMap().get("Masha")));
         System.out.println("Avg for Sasha: " + classRoomRates.avgRate(classRoomRates.getReportCardMap().get("Sasha")));
         System.out.println("Avg for Ivan: " + classRoomRates.avgRate(classRoomRates.getReportCardMap().get("Ivan")));
-
-
-
     }
 }
