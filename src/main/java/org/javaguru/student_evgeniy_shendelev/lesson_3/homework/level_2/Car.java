@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_2;
 
-public class Car {
+class Car {
     private String label;
     private String color;
     private int price;

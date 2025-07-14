@@ -1,6 +1,6 @@
 package org.javaguru.student_evgeniy_shendelev.lesson_3.homework.level_1;
 
-public class RobotApp {
+class RobotApp {
     public static void main(String[] args) {
         Robot robot1 = new Robot("Max");
         Robot robot2 = new Robot("Rick");

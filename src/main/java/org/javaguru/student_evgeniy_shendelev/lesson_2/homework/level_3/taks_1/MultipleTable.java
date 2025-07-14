@@ -2,7 +2,7 @@ package org.javaguru.student_evgeniy_shendelev.lesson_2.homework.level_3.taks_1;
 
 import java.util.Scanner;
 
-public class MultipleTable {
+class MultipleTable {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Напиши число от 1 до 9");

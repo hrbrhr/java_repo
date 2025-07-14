@@ -2,7 +2,7 @@ package org.javaguru.student_evgeniy_shendelev.lesson_2.homework.level_3.taks_3;
 
 import java.util.Scanner;
 
-public class Average {
+class Average {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double sum = 0L;
