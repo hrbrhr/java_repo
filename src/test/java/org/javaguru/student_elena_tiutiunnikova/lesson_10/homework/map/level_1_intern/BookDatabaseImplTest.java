@@ -182,5 +182,40 @@ class BookDatabaseImplTest {
         assertEquals(5, database.countAllBooks());
     }
 
+    @Test
+    void testDeleteByTitleSuccessful () {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
+        Book book5 = new Book("Waters", "Nochnoy dozor");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+        database.save(book4);
+        database.save(book5);
+
+        database.deleteByTitle("Nochnoy dozor");
+        assertEquals(3, database.countAllBooks());
+    }
+
+    @Test
+    void testDeleteByTitleFailed () {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
+        Book book5 = new Book("Waters", "Nochnoy dozor");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+        database.save(book4);
+        database.save(book5);
+
+        database.deleteByTitle("Bible");
+        assertEquals(5, database.countAllBooks());
+    }
 
 }

@@ -72,4 +72,9 @@ class BookDatabaseImpl implements BookDatabase {
         books.removeIf(book -> book.getAuthor().equals(author));
     }
 
+    @Override
+    public void deleteByTitle(String title) {
+        books.removeIf(book -> book.getTitle().equals(title));
+    }
+
 }
