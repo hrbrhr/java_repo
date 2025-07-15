@@ -40,4 +40,15 @@ class BookDatabaseImpl implements BookDatabase {
         return Optional.empty();
     }
 
+    @Override
+    public List<Book> findByAuthor(String author) {
+        List<Book> result = new ArrayList<>(); //Отдельный список нужен, т.к. может быть несколько книг от одного автора
+        for (Book book: books) {
+            if (book.getAuthor().equals(author)) {
+                result.add(book); //Если автор совпадает, мы добавляем эту книгу в новый список result
+            }
+        }
+        return result; //После цикла возвращаем этот список.
+    }
+
 }

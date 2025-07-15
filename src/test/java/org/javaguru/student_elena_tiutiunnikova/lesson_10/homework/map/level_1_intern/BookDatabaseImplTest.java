@@ -2,6 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -66,5 +67,36 @@ class BookDatabaseImplTest {
         Optional<Book> result = database.findById(1000L);
         assertEquals(Optional.empty(), result);
     }
+
+    @Test
+    void testFindAuthorSuccessfulSearch() {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+
+        List<Book> result = database.findByAuthor("Pushkin");
+        assertEquals(List.of(book1, book3), result);
+//        assertEquals(2, result.size());
+//        assertEquals(book1, result.get(0));
+    }
+
+    @Test
+    void testFindAuthorFailedSearch() {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+
+        List<Book> result = database.findByAuthor("Lermontov");
+        assertTrue(result.isEmpty());
+    }
+
 
 }
