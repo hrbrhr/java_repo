@@ -134,4 +134,18 @@ class BookDatabaseImplTest {
         assertTrue(result.isEmpty());
     }
 
+    @Test
+    void testCountAllBooksSuccessful() {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        database.save(book1);
+        database.save(book2);
+
+        int result = database.countAllBooks();
+        assertEquals(2, result);
+    }
+
+
+
 }
