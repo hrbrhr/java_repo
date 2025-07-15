@@ -51,4 +51,16 @@ class BookDatabaseImpl implements BookDatabase {
         return result; //После цикла возвращаем этот список.
     }
 
+    @Override
+    public List<Book> findByTitle(String title) {
+        List<Book> result = new ArrayList<>();
+        for (Book book: books) {
+            if (book.getTitle().equals(title)) {
+                result.add(book);
+            }
+        }
+        return result;
+    }
+
+
 }

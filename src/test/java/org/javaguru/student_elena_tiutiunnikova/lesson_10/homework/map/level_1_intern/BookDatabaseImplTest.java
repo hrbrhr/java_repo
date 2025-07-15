@@ -98,5 +98,40 @@ class BookDatabaseImplTest {
         assertTrue(result.isEmpty());
     }
 
+    @Test
+    void testFindTitleSuccessfulSearch() {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
+        Book book5 = new Book("Waters", "Nochnoy dozor");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+        database.save(book4);
+        database.save(book5);
+
+        List<Book> result = database.findByTitle("Nochnoy dozor");
+        assertEquals(List.of(book4, book5), result);
+    }
+
+    @Test
+    void testFindTitleFailedSearch() {
+        BookDatabaseImpl database = new BookDatabaseImpl();
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
+        Book book5 = new Book("Waters", "Nochnoy dozor");
+        database.save(book1);
+        database.save(book2);
+        database.save(book3);
+        database.save(book4);
+        database.save(book5);
+
+        List<Book> result = database.findByTitle("Bible");
+        assertTrue(result.isEmpty());
+    }
 
 }
