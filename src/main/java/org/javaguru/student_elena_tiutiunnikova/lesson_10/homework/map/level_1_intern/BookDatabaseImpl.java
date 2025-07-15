@@ -2,6 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 class BookDatabaseImpl implements BookDatabase {
 
@@ -28,4 +29,15 @@ class BookDatabaseImpl implements BookDatabase {
     public boolean delete(Book book) {
         return books.remove(book);
     };
+
+    @Override
+    public Optional<Book> findById(Long bookId) {
+        for (Book book: books) {
+            if (book.getId().equals(bookId)) {
+                return Optional.of(book);
+            }
+        }
+        return Optional.empty();
+    }
+
 }
