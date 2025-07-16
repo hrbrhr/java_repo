@@ -218,4 +218,44 @@ class BookDatabaseImplTest {
         assertEquals(5, database.countAllBooks());
     }
 
+    @Test
+    void testSearchCriteriaAuthorAndTitleSuccessful () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        SearchCriteria searchAuthorAndTitle = SearchCriteriaDemo.searchCriteriaTitleAndAuthor("Pushkin", "Dubrovsky");
+        List<Book> result = database.find(searchAuthorAndTitle);
+
+        assertEquals(1, result.size());
+        assertEquals("Pushkin", result.get(0).getAuthor());
+        assertEquals("Dubrovsky", result.get(0).getTitle());
+    }
+
+    @Test
+    void testSearchCriteriaAuthorAndYearSuccessful () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        SearchCriteria searchAuthorAndYear = SearchCriteriaDemo.searchCriteriaYearAndAuthor("Pushkin", "1820");
+        List<Book> result = database.find(searchAuthorAndYear);
+
+        assertEquals(1, result.size());
+        assertEquals("Pushkin", result.get(0).getAuthor());
+        assertEquals("1820", result.get(0).getYearOfIssue());
+    }
+
+    @Test
+    void testSearchCriteriaOrSuccessful () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        SearchCriteria searchOr = SearchCriteriaDemo.searchCriteriaOr("Pushkin", "Nochnoy dozor", "1967");
+        List<Book> result = database.find(searchOr);
+
+        assertEquals(5, result.size());
+      }
+
+    @Test
+    void testSearchCriteriaOrFailed () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        SearchCriteria searchOr = SearchCriteriaDemo.searchCriteriaOr("Lermontov", "Bible", "2025");
+        List<Book> result = database.find(searchOr);
+
+        assertEquals(0, result.size());
+    }
+
 }
