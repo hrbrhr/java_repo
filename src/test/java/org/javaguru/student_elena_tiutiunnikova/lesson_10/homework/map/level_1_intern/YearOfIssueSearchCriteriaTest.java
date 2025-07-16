@@ -4,21 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TitleSearchCriteriaTest {
+class YearOfIssueSearchCriteriaTest {
 
     @Test
-    void testMatchTitleSuccessful () {
+    void matchYearSuccessful () {
         Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
-
-        TitleSearchCriteria result = new TitleSearchCriteria("Ruslan y Lyudmila");
+        YearOfIssueSearchCriteria result = new YearOfIssueSearchCriteria("1820");
         assertTrue(result.match(book1));
     }
 
     @Test
-    void testMatchTitleFailed () {
+    void matchYearFailed () {
         Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
-
-        TitleSearchCriteria result = new TitleSearchCriteria("Dubrovsky");
+        YearOfIssueSearchCriteria result = new YearOfIssueSearchCriteria("1822");
         assertFalse(result.match(book1));
     }
 

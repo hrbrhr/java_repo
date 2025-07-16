@@ -13,8 +13,8 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteIDTrue() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
         database.save(book1);
         database.save(book2);
 
@@ -31,8 +31,8 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteBookTrue() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
         database.save(book1);
         database.save(book2);
 
@@ -47,8 +47,8 @@ class BookDatabaseImplTest {
     @Test
     void testOptionalSuccessfulSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
         database.save(book1);
         database.save(book2);
 
@@ -59,8 +59,8 @@ class BookDatabaseImplTest {
     @Test
     void testOptionalFailedSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
         database.save(book1);
         database.save(book2);
 
@@ -71,9 +71,9 @@ class BookDatabaseImplTest {
     @Test
     void testFindAuthorSuccessfulSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -87,9 +87,9 @@ class BookDatabaseImplTest {
     @Test
     void testFindAuthorFailedSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -101,11 +101,11 @@ class BookDatabaseImplTest {
     @Test
     void testFindTitleSuccessfulSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -119,11 +119,11 @@ class BookDatabaseImplTest {
     @Test
     void testFindTitleFailedSearch() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -137,8 +137,8 @@ class BookDatabaseImplTest {
     @Test
     void testCountAllBooksSuccessful() {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
         database.save(book1);
         database.save(book2);
 
@@ -149,11 +149,11 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteByAuthorSuccessful () {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -167,11 +167,11 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteByAuthorFailed () {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -185,11 +185,11 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteByTitleSuccessful () {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);
@@ -203,11 +203,11 @@ class BookDatabaseImplTest {
     @Test
     void testDeleteByTitleFailed () {
         BookDatabaseImpl database = new BookDatabaseImpl();
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
-        Book book2 = new Book("Bulgakov", "Master y Margarita");
-        Book book3 = new Book("Pushkin", "Dubrovsky");
-        Book book4 = new Book("Lukianenko", "Nochnoy dozor");
-        Book book5 = new Book("Waters", "Nochnoy dozor");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
+        Book book2 = new Book("Bulgakov", "Master y Margarita", "1967");
+        Book book3 = new Book("Pushkin", "Dubrovsky", "1833");
+        Book book4 = new Book("Lukianenko", "Nochnoy dozor", "1998");
+        Book book5 = new Book("Waters", "Nochnoy dozor", "2006");
         database.save(book1);
         database.save(book2);
         database.save(book3);

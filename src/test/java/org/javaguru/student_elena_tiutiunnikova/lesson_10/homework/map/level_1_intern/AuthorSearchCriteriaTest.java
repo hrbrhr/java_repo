@@ -8,7 +8,7 @@ class AuthorSearchCriteriaTest {
 
     @Test
     void testMatchSuccessful () {
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
 
         AuthorSearchCriteria result = new AuthorSearchCriteria("Pushkin");
         assertTrue(result.match(book1));
@@ -16,7 +16,7 @@ class AuthorSearchCriteriaTest {
 
     @Test
     void testMatchFailed () {
-        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila");
+        Book book1 = new Book("Pushkin", "Ruslan y Lyudmila", "1820");
 
         AuthorSearchCriteria result = new AuthorSearchCriteria("Lermontov");
         assertFalse(result.match(book1));
