@@ -1,4 +1,4 @@
-package org.javaguru.student_aleksey_volokitin.lesson_10_collections.list.lessoncode;
+package org.javaguru.student_aleksey_volokitin.lesson_10_collections.list_plus.lessoncode_plus;
 
 import java.util.ArrayList;
 import java.util.List;
