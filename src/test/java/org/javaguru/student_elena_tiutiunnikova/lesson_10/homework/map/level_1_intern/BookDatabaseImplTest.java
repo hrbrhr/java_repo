@@ -271,4 +271,15 @@ class BookDatabaseImplTest {
         assertTrue(uniqueAuthors.contains("Waters"));
     }
 
+    @Test
+    void testFindUniqueTitles () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Set<String> uniqueTitles = database.findUniqueTitles();
+
+        assertEquals(4, uniqueTitles.size());
+        assertTrue(uniqueTitles.contains("Ruslan y Lyudmila"));
+        assertTrue(uniqueTitles.contains("Master y Margarita"));
+        assertTrue(uniqueTitles.contains("Dubrovsky"));
+        assertTrue(uniqueTitles.contains("Nochnoy dozor"));
+    }
 }
