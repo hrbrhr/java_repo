@@ -104,5 +104,9 @@ class BookDatabaseImpl implements BookDatabase {
         return uniqueTitles;
     }
 
+    @Override
+    public Set<Book> findUniqueBooks() {
+        return new HashSet<>(books);
+    }
 
 }

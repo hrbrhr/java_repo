@@ -2,6 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -282,4 +283,15 @@ class BookDatabaseImplTest {
         assertTrue(uniqueTitles.contains("Dubrovsky"));
         assertTrue(uniqueTitles.contains("Nochnoy dozor"));
     }
+
+    @Test
+    void testFindUniqueBooks () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Set<Book> uniqueBook = database.findUniqueBooks();
+
+        assertEquals(5, uniqueBook.size());
+        assertTrue(uniqueBook.contains(new Book("Pushkin","Ruslan y Lyudmila", "1820")));
+        assertTrue(uniqueBook.contains(new Book("Bulgakov","Master y Margarita", "1967")));
+    }
+
 }
