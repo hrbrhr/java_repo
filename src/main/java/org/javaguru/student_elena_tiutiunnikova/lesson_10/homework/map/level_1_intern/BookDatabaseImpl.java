@@ -1,8 +1,6 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_intern;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 class BookDatabaseImpl implements BookDatabase {
 
@@ -23,12 +21,12 @@ class BookDatabaseImpl implements BookDatabase {
     @Override
     public boolean delete(Long bookId) {
        return books.removeIf(book -> book.getId().equals(bookId));
-    };
+    }
 
     @Override
     public boolean delete(Book book) {
         return books.remove(book);
-    };
+    }
 
     @Override
     public Optional<Book> findById(Long bookId) {
@@ -86,6 +84,15 @@ class BookDatabaseImpl implements BookDatabase {
             }
         }
         return result;
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        Set<String> uniqueAuthors = new HashSet<>(); // создаем пустое множество, которое будет хранить уникальные имена авторов
+        for (Book book : books) {
+            uniqueAuthors.add(book.getAuthor());
+        }
+        return uniqueAuthors;
     }
 
 }

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -256,6 +257,18 @@ class BookDatabaseImplTest {
         List<Book> result = database.find(searchOr);
 
         assertEquals(0, result.size());
+    }
+
+    @Test
+    void testFindUniqueAuthors () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Set<String> uniqueAuthors = database.findUniqueAuthors();
+
+        assertEquals(4, uniqueAuthors.size());
+        assertTrue(uniqueAuthors.contains("Pushkin"));
+        assertTrue(uniqueAuthors.contains("Bulgakov"));
+        assertTrue(uniqueAuthors.contains("Lukianenko"));
+        assertTrue(uniqueAuthors.contains("Waters"));
     }
 
 }

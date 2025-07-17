@@ -2,6 +2,7 @@ package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_
 
 import java.util.Optional;
 import java.util.List;
+import java.util.Set;
 
 interface BookDatabase {
 
@@ -15,4 +16,5 @@ interface BookDatabase {
     void deleteByAuthor(String author);
     void deleteByTitle(String title);
     List<Book> find(SearchCriteria searchCriteria);
+    Set<String> findUniqueAuthors();
 }
