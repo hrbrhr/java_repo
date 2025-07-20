@@ -23,4 +23,16 @@ public class Car {
     int getPrice() {
         return price;
     }
+
+    void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    void setColor(String color) {
+        this.color = color;
+    }
+
+    void setPrice(int price) {
+        this.price = price;
+    }
 }
