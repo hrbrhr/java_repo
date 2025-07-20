@@ -8,4 +8,20 @@ public class Chapter {
         this.title = title;
         this.text = text;
     }
+
+    String getTitle() {
+        return title;
+    }
+
+    void setTitle(String title) {
+        this.title = title;
+    }
+
+    String getText() {
+        return text;
+    }
+
+    void setText(String text) {
+        this.text = text;
+    }
 }
