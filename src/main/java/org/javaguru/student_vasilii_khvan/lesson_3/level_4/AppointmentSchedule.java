@@ -19,4 +19,23 @@ public class AppointmentSchedule {
         this.appointment1416 = appointment1416;
     }
 
+    String getName() {
+        return name;
+    }
+
+    String getSpecialty() {
+        return specialty;
+    }
+
+    LocalDate getDate() {
+        return date;
+    }
+
+    Appointment getAppointment1012() {
+        return appointment1012;
+    }
+
+    Appointment getAppointment1416() {
+        return appointment1416;
+    }
 }

@@ -12,5 +12,17 @@ public class DoctorTimetableApp {
                 LocalDate.of(2025, 7, 21), appointment1012, null);
         AppointmentSchedule appointmentSchedule2 = new AppointmentSchedule("Doctor Aibolit", "therapist",
                 LocalDate.of(2025, 7, 21), null, appointment1416);
+
+        System.out.println(appointment1012.getName());
+        System.out.println(appointment1012.getDiagnosis());
+        System.out.println(appointment1012.getPrice());
+
+        System.out.println();
+
+        System.out.println(appointmentSchedule.getName());
+        System.out.println(appointmentSchedule.getSpecialty());
+        System.out.println(appointmentSchedule.getDate());
+        System.out.println(appointmentSchedule.getAppointment1012());
+        System.out.println(appointmentSchedule.getAppointment1416());
     }
 }

@@ -11,4 +11,16 @@ public class Appointment {
         this.diagnosis = diagnosis;
         this.price = price;
     }
+
+    String getName() {
+        return name;
+    }
+
+    String getDiagnosis() {
+        return diagnosis;
+    }
+
+    int getPrice() {
+        return price;
+    }
 }
