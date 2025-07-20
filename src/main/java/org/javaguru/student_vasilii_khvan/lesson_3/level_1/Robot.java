@@ -7,4 +7,8 @@ class Robot {
     public Robot(String name) {
         this.name = name;
     }
+
+    String getName() {
+        return name;
+    }
 }

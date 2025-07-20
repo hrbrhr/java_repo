@@ -5,5 +5,7 @@ class RobotApp {
     public static void main(String[] args) {
         Robot t800 = new Robot("T800");
         Robot t1000 = new Robot("t1000");
+        System.out.println(t800.getName());
+        System.out.println(t1000.getName());
     }
 }
