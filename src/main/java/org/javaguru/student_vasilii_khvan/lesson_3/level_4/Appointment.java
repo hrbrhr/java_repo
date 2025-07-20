@@ -1,0 +1,14 @@
+package org.javaguru.student_vasilii_khvan.lesson_3.level_4;
+
+public class Appointment {
+
+    private String name;
+    private String diagnosis;
+    private int price;
+
+    Appointment(String name, String diagnosis, int price) {
+        this.name = name;
+        this.diagnosis = diagnosis;
+        this.price = price;
+    }
+}
