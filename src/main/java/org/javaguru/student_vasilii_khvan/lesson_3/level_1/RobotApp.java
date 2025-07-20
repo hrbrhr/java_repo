@@ -7,5 +7,12 @@ class RobotApp {
         Robot t1000 = new Robot("t1000");
         System.out.println(t800.getName());
         System.out.println(t1000.getName());
+
+        System.out.println();
+
+        t800.setName("Arnold Schwarzenegger");
+        t1000.setName("Robert Patrick");
+        System.out.println(t800.getName());
+        System.out.println(t1000.getName());
     }
 }
