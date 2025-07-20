@@ -1,6 +1,6 @@
 package org.javaguru.student_vasilii_khvan.lesson_3.level_3;
 
-public class BookApp {
+class BookApp {
 
     public static void main(String[] args) {
         Chapter chapterOne = new Chapter("The Boy Who Lived", "Text of Chapter One");

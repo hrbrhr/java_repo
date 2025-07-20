@@ -2,7 +2,7 @@ package org.javaguru.student_vasilii_khvan.lesson_3.level_4;
 
 import java.time.LocalDate;
 
-public class DoctorTimetableApp {
+class DoctorTimetableApp {
 
     public static void main(String[] args) {
         Appointment appointment1012 = new Appointment("Khvan Vasilii", "bronchitis", 6000);

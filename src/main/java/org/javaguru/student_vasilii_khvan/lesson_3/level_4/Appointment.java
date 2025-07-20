@@ -1,6 +1,6 @@
 package org.javaguru.student_vasilii_khvan.lesson_3.level_4;
 
-public class Appointment {
+class Appointment {
 
     private String name;
     private String diagnosis;

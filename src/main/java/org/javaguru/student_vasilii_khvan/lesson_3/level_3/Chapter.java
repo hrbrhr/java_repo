@@ -1,6 +1,6 @@
 package org.javaguru.student_vasilii_khvan.lesson_3.level_3;
 
-public class Chapter {
+class Chapter {
     private String title;
     private String text;
 
