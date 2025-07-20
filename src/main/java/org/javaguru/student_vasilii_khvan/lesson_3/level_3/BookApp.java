@@ -17,5 +17,11 @@ public class BookApp {
 
         Book bookTwo = new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling",
                                     1998, chapterOne, chapterTwo);
+
+        System.out.println(bookOne.getTitle());
+        System.out.println(bookOne.getAuthor());
+        System.out.println(bookOne.getYear());
+        System.out.println(bookOne.getChapterOne());
+        System.out.println(bookOne.getChapterTwo());
     }
 }
