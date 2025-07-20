@@ -6,5 +6,19 @@ public class CarApp {
         Car chevrolet = new Car("Chevrolet", "White", 1000);
         Car kia = new Car("KIA", "Black", 2000);
         Car bmw = new Car("BMW", "Blue", 3000);
+
+        System.out.println(chevrolet.getBrand());
+        System.out.println(chevrolet.getColor());
+        System.out.println(chevrolet.getPrice());
+        System.out.println();
+
+        System.out.println(kia.getBrand());
+        System.out.println(kia.getColor());
+        System.out.println(kia.getPrice());
+        System.out.println();
+
+        System.out.println(bmw.getBrand());
+        System.out.println(bmw.getColor());
+        System.out.println(bmw.getPrice());
     }
 }
