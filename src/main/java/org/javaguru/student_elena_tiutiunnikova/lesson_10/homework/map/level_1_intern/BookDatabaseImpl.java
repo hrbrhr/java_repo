@@ -109,4 +109,41 @@ class BookDatabaseImpl implements BookDatabase {
         return new HashSet<>(books);
     }
 
+    @Override
+    public boolean contains(Book book) {
+        return books.contains(book);
+    }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+//        Данный метод должен возвращать мап в котором ключом является
+//        автор, а значением список книг этого автора.
+
+        Map<String, List<Book>> authorMap = new HashMap<>();
+        for (Book book : books) {
+            String author = book.getAuthor();
+            authorMap.computeIfAbsent(author, key -> new ArrayList<>()).add(book);
+        }
+        return authorMap;
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+//        Данный метод должен возвращать мап в котором ключом является
+//        автор, а значением количество уникальных книг этого автора в базе данных.
+        Map<String, Set<Book>> authorToUniqueBooks = new HashMap<>();
+        for (Book book : books) {
+            String author = book.getAuthor();
+            authorToUniqueBooks.computeIfAbsent(author, key -> new HashSet<>()).add(book);
+        }
+
+        // Конечная мапа для хранения количества уникальных книг для каждого автора
+        Map<String, Integer> authorToCount = new HashMap<>();
+        for (Map.Entry<String, Set<Book>> entry : authorToUniqueBooks.entrySet()) {
+            authorToCount.put(entry.getKey(), entry.getValue().size());
+        }
+
+        return authorToCount;
+    }
+
 }

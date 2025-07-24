@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.Map;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -292,6 +294,39 @@ class BookDatabaseImplTest {
         assertEquals(5, uniqueBook.size());
         assertTrue(uniqueBook.contains(new Book("Pushkin","Ruslan y Lyudmila", "1820")));
         assertTrue(uniqueBook.contains(new Book("Bulgakov","Master y Margarita", "1967")));
+    }
+
+    @Test
+    void testContainsBook () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Book newBook = new Book("Bulgakov","Master y Margarita", "1967");
+        assertTrue(database.contains(newBook));
+    }
+
+    @Test
+    void testNoContainsBook () {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Book newBook = new Book("Tolstoy","War and Peace", "1869");
+        assertFalse(database.contains(newBook));
+    }
+
+    @Test
+    void testGetAuthorToBooksMap() {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Map<String, List<Book>> map = database.getAuthorToBooksMap();
+
+        assertEquals(4, map.size());
+        assertEquals(2, map.get("Pushkin").size());
+    }
+
+    @Test
+    void testGetEachAuthorBookCount() {
+        BookDatabase database = SearchCriteriaDemo.bookDatabase();
+        Map<String, Integer> map = database.getEachAuthorBookCount();
+
+        assertEquals(2, map.get("Pushkin"));
+        assertEquals(1, map.get("Bulgakov"));
+        assertNull(map.get("Tolstoy"));
     }
 
 }

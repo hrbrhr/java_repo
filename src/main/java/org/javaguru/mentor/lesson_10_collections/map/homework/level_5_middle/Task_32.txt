@@ -1,6 +1,6 @@
 Разработка UI (User Interface) для интерфейса BookDatabase.
 
-Создайте класс BookLibraryApplication.
+Создайте класс .
 
 class BookLibraryApplication {
 

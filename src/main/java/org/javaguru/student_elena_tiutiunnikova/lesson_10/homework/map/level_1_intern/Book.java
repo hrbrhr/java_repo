@@ -38,10 +38,12 @@ class Book {
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return yearOfIssue.equals(book.yearOfIssue) && title.equals(book.title) && author.equals(book.author);
+//        return id.equals(book.id) && yearOfIssue.equals(book.yearOfIssue) && title.equals(book.title) && author.equals(book.author);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(yearOfIssue, title, author);
+//        return Objects.hash(id, yearOfIssue, title, author);
     }
 }

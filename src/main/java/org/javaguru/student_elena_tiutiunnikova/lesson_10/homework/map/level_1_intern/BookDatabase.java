@@ -1,5 +1,6 @@
 package org.javaguru.student_elena_tiutiunnikova.lesson_10.homework.map.level_1_intern;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.List;
 import java.util.Set;
@@ -19,5 +20,7 @@ interface BookDatabase {
     Set<String> findUniqueAuthors();
     Set<String> findUniqueTitles();
     Set<Book> findUniqueBooks();
-
+    boolean contains(Book book);
+    Map<String, List<Book>> getAuthorToBooksMap();
+    Map<String, Integer> getEachAuthorBookCount();
 }
