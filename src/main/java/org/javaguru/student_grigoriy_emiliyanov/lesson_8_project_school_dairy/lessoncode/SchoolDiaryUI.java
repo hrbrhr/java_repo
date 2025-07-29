@@ -1,5 +1,6 @@
 package org.javaguru.student_grigoriy_emiliyanov.lesson_8_project_school_dairy.lessoncode;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -10,6 +11,7 @@ class SchoolDiaryUI {
 
     /**
      * Returns entered choice or Integer.MIN_VALUE if error
+     *
      * @return entered choice or Integer.MIN_VALUE if error
      */
     public int getChoice() {
@@ -19,6 +21,7 @@ class SchoolDiaryUI {
 
     /**
      * Returns entered subject
+     *
      * @return entered subject
      */
     public String getSubject() {
@@ -28,6 +31,7 @@ class SchoolDiaryUI {
 
     /**
      * Returns entered mark or Integer.MIN_VALUE if error
+     *
      * @return entered mark or Integer.MIN_VALUE if error
      */
     public int getMark() {
@@ -37,6 +41,7 @@ class SchoolDiaryUI {
 
     /**
      * Print given text to the user console
+     *
      * @param text
      */
     public void printMessage(String text) {
@@ -44,11 +49,29 @@ class SchoolDiaryUI {
     }
 
     /**
-     * Prints given double to the user console
-     * @param d
+     * Print given text and given value separated by colon
+     *
+     * @param text
+     * @param value
      */
-    public void printMessage(Double d) {
-        System.out.println(d);
+    public void printInformation(String text, double value) {
+        System.out.println(text + ": " + value);
+    }
+
+    /**
+     * Prints all given marks
+     *
+     * @param marks
+     */
+    public void printAllMarks(List<Mark> marks) {
+        if (marks.isEmpty()) {
+            printMessage("There is no mark!");
+        } else {
+            printMessage("Marks:");
+            for (Mark mark : marks) {
+                printMessage(mark.toString());
+            }
+        }
     }
 
     /**
@@ -71,6 +94,7 @@ class SchoolDiaryUI {
     /**
      * Reads an integer from the console and returns it.
      * If error Integer.MIN_VALUE is returned.
+     *
      * @return integer or Integer.MIN_VALUE if case of error
      */
     private int readInt() {

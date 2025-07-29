@@ -87,4 +87,13 @@ class SchoolDiary {
         if (marks.isEmpty()) return 0;
         return (double) marks.stream().mapToInt(Mark::getMark).sum() / marks.size();
     }
+
+    /**
+     * Returns true if given mark is between 1 and 10, otherwise false
+     * @param mark
+     * @return true if given mark is between 1 and 10, otherwise false
+     */
+    public boolean isValidMarkValue(int mark) {
+        return (mark >= 0) && (mark <= 10);
+    }
 }

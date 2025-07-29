@@ -44,7 +44,7 @@ class SchoolDiaryApp {
                     handleExit();
                     break;
                 default:
-                    System.out.println("Enter number between 1 and " + (Choice.values().length - 1));
+                    ui.printMessage("Enter number between 1 and " + (Choice.values().length - 1));
             }
         }
     }
@@ -55,7 +55,8 @@ class SchoolDiaryApp {
     private void handleAddMark() {
         String subject = ui.getSubject();
         int mark = ui.getMark();
-        if (mark < 0 || mark > 10) {
+        if (!schoolDiary.isValidMarkValue(mark)) {
+            ui.printMessage("Mark must be between 1-10. No mark added.");
             return;
         }
         schoolDiary.addMark(subject, mark);
@@ -67,36 +68,34 @@ class SchoolDiaryApp {
      */
     private void handleMaxMark() {
         String subject = ui.getSubject();
-        ui.printMessage("Max mark:");
-        ui.printMessage(Integer.toString(schoolDiary.findMax(subject)));
+        int max = schoolDiary.findMax(subject);
+        ui.printInformation("Max mark:", max);
     }
 
     /**
      * Prints min mark scenario for user entered subject
      */
     private void handleMinMark() {
-        ui.printMessage("Min mark:");
         String subject = ui.getSubject();
-        ui.printMessage(Integer.toString(schoolDiary.findMin(subject)));
+        int min = schoolDiary.findMin(subject);
+        ui.printInformation("Min mark:", min);
     }
 
     /**
      * Prints average mark scenario for user entered subject
      */
     private void handleAverage() {
-        ui.printMessage("Average mark:");
         String subject = ui.getSubject();
         double average = schoolDiary.findAverageForSubject(subject);
-        ui.printMessage(average);
+        ui.printInformation("Average mark:", average);
     }
 
     /**
      * Prints average mark scenario for all subjects
      */
     private void handleOverallAverage() {
-        ui.printMessage("Overall average mark:");
         double overallAverage = schoolDiary.findOverallAverage();
-        ui.printMessage(overallAverage);
+        ui.printInformation("Overall average mark:", overallAverage);
     }
 
     /**
@@ -104,14 +103,7 @@ class SchoolDiaryApp {
      */
     private void handleAllMarks() {
         List<Mark> marks = schoolDiary.getAllMarks();
-        if (marks.isEmpty()) {
-            ui.printMessage("There is no mark!");
-        } else {
-            ui.printMessage("Marks:");
-            for (Mark mark : marks) {
-                ui.printMessage(mark.toString());
-            }
-        }
+        ui.printAllMarks(marks);
     }
 
     /**
