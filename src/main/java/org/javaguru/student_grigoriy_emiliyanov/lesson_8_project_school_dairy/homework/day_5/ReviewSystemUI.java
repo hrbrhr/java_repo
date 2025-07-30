@@ -3,7 +3,7 @@ package org.javaguru.student_grigoriy_emiliyanov.lesson_8_project_school_dairy.h
 import java.util.List;
 import java.util.Scanner;
 
-public class ReviewSystemUI {
+class ReviewSystemUI {
     private final Scanner scanner = new Scanner(System.in);
 
     /**
