@@ -6,7 +6,10 @@ class FraudDetector {
     private final List<FraudRule> fraudRules = List.of(
             new FraudRule1(),
             new FraudRule2(),
-            new FraudRule3()
+            new FraudRule3(),
+            new FraudRule4(),
+            new FraudRule5(),
+            new FraudRule6()
     );
 
     boolean isFraud(Transaction transaction) {
