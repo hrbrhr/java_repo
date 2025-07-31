@@ -1,0 +1,14 @@
+package org.javaguru.student_grigoriy_emiliyanov.project_4_geometry_shape.task_10.geometry.shapes;
+
+abstract class Shape {
+
+    private String title;
+
+    Shape(String title) {
+        this.title = title;
+    }
+
+    abstract double calculateArea();
+    abstract double calculatePerimeter();
+
+}
