@@ -83,6 +83,22 @@ class BookDatabaseImpl implements BookDatabase {
                 result.add(book);
             }
         }
+
+        searchCriteria.getSortingComparator().ifPresent(comparator -> result.sort(comparator));
+
+        Optional<Paging> pagingOpt = searchCriteria.getPaging();
+        if (pagingOpt.isPresent()) {
+            Paging paging = pagingOpt.get();
+            int fromIndex = (paging.getPageNumber() - 1) * paging.getPageSize();
+            int toIndex = Math.min(fromIndex + paging.getPageSize(), result.size());
+
+            if (fromIndex >= result.size()) {
+                return Collections.emptyList();
+            }
+
+            return result.subList(fromIndex, toIndex);
+        }
+
         return result;
     }
 

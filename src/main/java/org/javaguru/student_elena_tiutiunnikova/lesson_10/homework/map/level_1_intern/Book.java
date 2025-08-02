@@ -46,4 +46,5 @@ class Book {
         return Objects.hash(yearOfIssue, title, author);
 //        return Objects.hash(id, yearOfIssue, title, author);
     }
+
 }

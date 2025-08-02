@@ -4,6 +4,8 @@ class BookLibraryApplication {
 
     public static void main(String[] args) {
         BookLibrary bookLibrary = new BookLibrary();
+
+        bookLibrary.printMenu();
         bookLibrary.run();
     }
 

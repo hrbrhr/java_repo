@@ -17,6 +17,38 @@ class BookLibrary {
         menuNumberToActionMap.put(3, new FindByAuthorUIAction(bookDatabase));
         menuNumberToActionMap.put(4, new FindByTitleUIAction(bookDatabase));
         menuNumberToActionMap.put(5, new DeleteByIdUIAction(bookDatabase));
+        menuNumberToActionMap.put(6, new СountByUIAction(bookDatabase));
+        menuNumberToActionMap.put(7, new DeleteByAuthorUIAction(bookDatabase));
+        menuNumberToActionMap.put(8, new DeleteByTitleUIAction(bookDatabase));
+        menuNumberToActionMap.put(9, new FindUniqueAuthorsUIAction(bookDatabase));
+        menuNumberToActionMap.put(10, new FindUniqueTitlesUIAction(bookDatabase));
+        menuNumberToActionMap.put(11, new FindUniqueBooksUIAction(bookDatabase));
+        menuNumberToActionMap.put(12, new FindBookUIAction(bookDatabase));
+        menuNumberToActionMap.put(13, new СontainsUIAction(bookDatabase));
+        menuNumberToActionMap.put(14, new GetAuthorToBooksMapUIAction(bookDatabase));
+        menuNumberToActionMap.put(15, new GetEachAuthorBookCountUIAction(bookDatabase));
+    }
+
+    public void printMenu () {
+        System.out.println();
+        System.out.println("Program menu: ");
+        System.out.println("1. Add mark");
+        System.out.println("2. Find book by ID");
+        System.out.println("3. Find books by author");
+        System.out.println("4. Find books by title");
+        System.out.println("5. Delete book by ID");
+        System.out.println("6. Count all books in library");
+        System.out.println("7. Delete books by author");
+        System.out.println("8. Delete books by title");
+        System.out.println("9. Find unique authors");
+        System.out.println("10. Find unique titles");
+        System.out.println("11. Find unique books");
+        System.out.println("12. Find books by criterias");
+        System.out.println("13. Find book in library");
+        System.out.println("14. Get Author To Books Map");
+        System.out.println("15. Get Each Author Book Count");
+        System.out.println("16. Exit");
+        System.out.println();
     }
 
     public void run() {
