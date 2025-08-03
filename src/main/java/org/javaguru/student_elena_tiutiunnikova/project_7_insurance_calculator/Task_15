@@ -1,0 +1,14 @@
+Попробуйте поделить на более маленькие задачи
+алгоритм расчёта страховой премии:
+
+1.PREMIUM = PREMIUM_FIRE + PREMIUM_THEFT
+
+2.1.PREMIUM_FIRE = SUM_INSURED_FIRE * COEFFICIENT_FIRE
+SUM_INSURED_FIRE - total sum insured of all policy's sub-objects with type "Fire"
+COEFFICIENT_FIRE - by default 0.014 but if SUM_INSURED_FIRE is over 100 then 0.024
+
+3.PREMIUM_THEFT = SUM_INSURED_THEFT * COEFFICIENT_THEFT
+SUM_INSURED_THEFT - total sum insured of all policy's sub-objects with type "Theft"
+COEFFICIENT_THEFT - by default 0.11 but if SUM_INSURED_THEFT equal or greater than
+15 then 0.05
+
