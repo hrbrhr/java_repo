@@ -14,7 +14,7 @@ class ArrayExceptionAPP {
                          "Array index out of bounds"
         );
 
-        throw arrayException;//kidaet iskljuciteljnuju situaciju
+//        throw arrayException;//kidaet iskljuciteljnuju situaciju
 
         System.out.println(arr[3]);
         System.out.println(arr[2]);

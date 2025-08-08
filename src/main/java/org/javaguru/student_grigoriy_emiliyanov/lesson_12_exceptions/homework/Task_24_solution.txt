@@ -1,0 +1,63 @@
+Найдите в документации Java (javadoc) для чего используются
+следующие ошибки:
+- ArrayIndexOutOfBoundsException
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Exception
+java.lang.RuntimeException
+    java.lang.ArithmeticException
+
+    * thrown when array is accessed with illegal index (negative or greater than the size of array)
+
+************************************************************************************
+- IllegalArgumentException
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Exception
+java.lang.RuntimeException
+    java.lang.IllegalArgumentException
+    * thrown when method has been passed illegal or inappropriate argument
+
+************************************************************************************
+- NumberFormatException
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Exception
+java.lang.RuntimeException
+java.lang.IllegalArgumentException
+java.lang.NumberFormatException
+    * thrown when string to number conversion occurred with string having not appropriate format
+
+************************************************************************************
+- IOException
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Exception
+java.io.IOException
+     * thrown when IO exception of some sort occurred
+
+************************************************************************************
+- StackOverflowError
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Error
+java.lang.VirtualMachineError
+    java.lang.StackOverflowError
+
+    * thrown when Stack overflow occurs when recursive call went deeply than accepted
+
+************************************************************************************
+- OutOfMemoryError
+
+java.lang.Object
+java.lang.Throwable
+java.lang.Error
+java.lang.VirtualMachineError
+    java.lang.OutOfMemoryError
+    * thrown when JVM cannot provide more memory for object storage and no memory can be cleaned by GC
+

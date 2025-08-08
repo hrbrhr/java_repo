@@ -6,7 +6,5 @@ class ArrayException extends Exception {
     private  int arraySize;
     private  String errorMessage;
 
-    public  ArrayException(int arrayIndex,int arraySize,
-
-    )
+    public  ArrayException(int arrayIndex,int arraySize, String errorMessage){}
 }

@@ -1,7 +1,7 @@
 package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.set.lessoncode;
 
 class UniqueWords {
-    static MySet<String> set = new MySet<>();
+    static MySetWithList<String> set = new MySetWithList<>();
 
     public static void main(String[] args) {
         UniqueWords uniqueWords = new UniqueWords();

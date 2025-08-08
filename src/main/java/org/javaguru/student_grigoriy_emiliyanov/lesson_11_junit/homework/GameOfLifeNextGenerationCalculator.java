@@ -4,6 +4,7 @@ class GameOfLifeNextGenerationCalculator {
 
     public boolean[][] calculate(boolean[][] currentGeneration) {
         return null; // реализацию напишем тут чуть позже
+
     }
 
 }

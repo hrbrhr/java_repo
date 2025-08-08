@@ -3,7 +3,7 @@ package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.set.lesso
 import java.util.ArrayList;
 import java.util.List;
 
-class MySet<T> {
+class MySetWithList<T> {
     private List<T> set = new ArrayList<>();
 
     boolean add(T element) {
