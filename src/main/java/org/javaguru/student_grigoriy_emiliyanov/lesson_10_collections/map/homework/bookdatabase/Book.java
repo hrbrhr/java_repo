@@ -1,8 +1,8 @@
-package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.map.homework;
+package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.map.homework.bookdatabase;
 
 import java.util.Objects;
 
-class Book {
+public class Book {
     private Long id;
     private String title;
     private String author;

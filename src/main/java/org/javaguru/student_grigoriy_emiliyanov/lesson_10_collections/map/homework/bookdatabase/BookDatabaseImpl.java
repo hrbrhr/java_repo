@@ -1,6 +1,7 @@
-package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.map.homework;
+package org.javaguru.student_grigoriy_emiliyanov.lesson_10_collections.map.homework.bookdatabase;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 class BookDatabaseImpl implements BookDatabase {
     List<Book> books = new ArrayList<>();
@@ -44,13 +45,59 @@ class BookDatabaseImpl implements BookDatabase {
     }
 
     @Override
+    public List<Book> find(SearchCriteria searchCriteria) {
+        return books.stream()
+                .filter(searchCriteria::match)
+                .toList();
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        return books.stream()
+                .map(Book::getAuthor)
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        return books.stream()
+                .map(Book::getTitle)
+                .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        return new HashSet<>(books);
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        return books.contains(book);
+    }
+
+    @Override
+    public Set<String> find(String text) {
+        return Set.of();
+    }
+
+    @Override
+    public Map<String, List<Book>> getAuthorToBooksMap() {
+        return Map.of();
+    }
+
+    @Override
+    public Map<String, Integer> getEachAuthorBookCount() {
+        return Map.of();
+    }
+
+    @Override
     public Optional<Book> findById(Long bookId) {
         for (Book book : books) {
             if (book.getId().equals(bookId)) {
                 return Optional.of(book);
             }
         }
-        return Optional.ofNullable(null);
+        return Optional.empty();
     }
 
     @Override
