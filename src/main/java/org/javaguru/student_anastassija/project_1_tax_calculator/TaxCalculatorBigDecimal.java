@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 class TaxCalculatorBigDecimal{
-    BigDecimal threshold = new BigDecimal("10000");
-    BigDecimal upperLimit = new BigDecimal("50000");
+    BigDecimal LOWER_THRESHOLD = new BigDecimal("10000");
+    BigDecimal UPPER_THRESHOLD = new BigDecimal("50000");
     BigDecimal rate1 = new BigDecimal("0.3");
     BigDecimal rate2 = new BigDecimal("0.4");
     BigDecimal rate3 = new BigDecimal("0.5");
@@ -21,18 +21,28 @@ class TaxCalculatorBigDecimal{
         }
     }
     private boolean isIncomeLessThan10k(BigDecimal testIncome) {
-        return testIncome.compareTo(threshold) <= 0;
+        return testIncome.compareTo(LOWER_THRESHOLD) <= 0;
     }
     private boolean isIncomeMoreThan10kAndLessThan50k(BigDecimal incomeBetween) {
-        return incomeBetween.compareTo(threshold) > 0 &&
-                incomeBetween.compareTo(upperLimit) <= 0 ;
+        return incomeBetween.compareTo(LOWER_THRESHOLD) > 0 &&
+                incomeBetween.compareTo(UPPER_THRESHOLD) <= 0 ;
     }
     private BigDecimal calculateFirstPart(){
-        return threshold.multiply(rate1);
+        return LOWER_THRESHOLD.multiply(rate1);
     }
     private BigDecimal calculateSecondPart(BigDecimal income){
-        return income.subtract(threshold).multiply(rate2);
+
+        BigDecimal aboveThresholdAmount = income.subtract(LOWER_THRESHOLD);// zp - 10000
+        BigDecimal rangeMaxAmount = UPPER_THRESHOLD.subtract(LOWER_THRESHOLD);// 50000-10000
+        BigDecimal amountInRange = aboveThresholdAmount.compareTo(rangeMaxAmount) < 0 ? aboveThresholdAmount : rangeMaxAmount;
+        return amountInRange.multiply(rate2);  // Умножаем только реальную сумму в данном диапазоне
     }
+
+    private BigDecimal calculateThirdPart(BigDecimal income){
+        BigDecimal thirdPart = income.subtract(UPPER_THRESHOLD);
+        return  thirdPart.multiply(rate3); // (доход - 50 000) * 0.5
+    }
+
     private BigDecimal calculateTaxGradeWhenIncomeUnder10k(BigDecimal income) {
         return income.multiply(rate1)
                 .setScale(2, RoundingMode.HALF_UP);
@@ -41,7 +51,6 @@ class TaxCalculatorBigDecimal{
         return calculateFirstPart().add(calculateSecondPart(income)).setScale(2, RoundingMode.HALF_UP);
     }
     private BigDecimal calculateTaxGradeWhenIncomeMoreThan50k(BigDecimal income) {
-        BigDecimal part3 = income.subtract(upperLimit).multiply(rate3);  // (доход - 50 000) * 0.5
-        return calculateFirstPart().add(calculateSecondPart(income)).add(part3).setScale(2, RoundingMode.HALF_UP);
+        return calculateFirstPart().add(calculateSecondPart(income)).add(calculateThirdPart(income)).setScale(2, RoundingMode.HALF_UP);
     }
 }

@@ -8,24 +8,23 @@ class TaxCalculateBigDecimalTests{
 
         TaxCalculateBigDecimalTests test = new TaxCalculateBigDecimalTests();
         test.testTaxCalculator(new BigDecimal("9500"), new BigDecimal("2850"));
+        test.testTaxCalculator(new BigDecimal("10000"), new BigDecimal("3000"));
+        test.testTaxCalculator(new BigDecimal("12000"), new BigDecimal("3800"));
+        test.testTaxCalculator(new BigDecimal("50000"), new BigDecimal("19000"));
         test.testTaxCalculator(new BigDecimal("88000"), new BigDecimal("38000"));
 
     }
 
     public void testTaxCalculator(BigDecimal salary, BigDecimal expectedResult){
 
-
         // vhodjashie dannye
 
         // vyzyvaem metod tax calculation, ispolzuja vhodjashie dannye
 
         TaxCalculatorBigDecimal calculator = new TaxCalculatorBigDecimal();
-        //calculator.calculateTaxBigDecimal(salary);
         BigDecimal calculatedTax = calculator.calculateTaxBigDecimal(salary);
 
         // sootvetstvie rezultata ozhidaniju
-
-        //BigDecimal expectedResult = new BigDecimal("2850");
         //sravnivaju resultaty
 
         if(expectedResult.compareTo(calculatedTax) == 0) {
@@ -36,7 +35,9 @@ class TaxCalculateBigDecimalTests{
         }
 
         //vyvesti rezultat na konsol
+        System.out.println("Salary is: " + salary );
         System.out.println("Calculated tax is: " + calculatedTax );
+        System.out.println("Expected tax is: " + expectedResult );
 
 
     }
